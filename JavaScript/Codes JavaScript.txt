@@ -385,6 +385,10 @@ var nomeobj = {dado1: conteudo1, dado2: conteudo2, dado 3: conteudo3 }; *não co
 
 var nomeobj = {[nomevar]: conteudo} ||| Nome do dado igual a o conteudo de uma Variavel
 
+var nomeobj = { função () {}  } ||| Método abreviado para declaração de um dado tipo Função
+
+var nomeobj = { get função () {}  } ||| Método Get em uma função, serve para pegar o return da mesma se tiver  
+
 *Podemos colocar arrays dentro do objeto e até mesmo outro objeto sem problema
 
 
@@ -392,9 +396,11 @@ var nomeobj = {[nomevar]: conteudo} ||| Nome do dado igual a o conteudo de uma V
 
 obj.dado ||| Pega somente o conteudo dentro do dado referido
 
-obj.dadofunção(parametro) ||| Colocar parametro em uma função de um dado do Objeto
-
 obj["nome-do-dado"]  ||| Segunda forma de pegar conteudo de um dado, usada quando o nome do dado é meio irregular
+
+
+obj.dadofunção(parametros)  ||| Chamar Função de um dado, (Se ela não tiver parametros deixar o (parenteses) vazio)
+
 
 
 obj.dado = conteudo   ||| Adiciona mais um dado na ultima posição do Objeto

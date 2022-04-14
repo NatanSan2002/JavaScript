@@ -53,7 +53,35 @@ nome: "Goku", idade: 25, serie: "DBZ"
 }];
 
 
-console.log(usuarios);
+var usuario = {
+    atual: 0, proximo: function () {
+        ++usuario.atual
+    },
+    anterior: function () {
+        --usuario.atual
+    },
+   get position () {
+        return usuarios[this.atual]
+    }
+   
+}
+
+
+
+
+console.log(usuario.position); usuario.proximo();
+console.log(usuario.position); usuario.proximo();
+console.log(usuario.position); usuario.proximo();
+console.log(usuario.position); 
+
+
+console.log("Voltando Posiçoes...")
+
+console.log(usuario.position); usuario.anterior();
+console.log(usuario.position); usuario.anterior();
+console.log(usuario.position); usuario.anterior();
+console.log(usuario.position); usuario.anterior();
+
 
 
 
