@@ -1,0 +1,437 @@
+<script>conteudo na linguagem JS </script> - Tag JavaScript Interna
+
+<script src="conteudo do nome do arquivo.js"> </script> - Tag JavaScript Externa 
+
+
+em JS se for colocar um comando dps de outro colocar um ; para indicar que o comando anterior acabou. Ou pular a para linha de baixo
+
+
+window.alert("conteudo") - Exibe tela de mensagem
+
+window.confirm("conteudo") - Exibe na tela uma mensagem de Ok/Cancel 
+
+window.prompt("conteudo") - Exibe na tela uma mensagem de pergunta
+
+window.open( 'endereço do site' ) ||| Faz um Popup de abrir outra abra 
+
+
+
+/* conteudo */ - Comentario Em JavaScript
+
+
+
+var nome = conteudo - Variavel , Atribuição de um Conteudo A Uma Identificação com Nome 
+
+(
+O Nome da Variavel Deve conter somente letras, números e underscore.
+O Nome da Variavel só pode começar com uma: letra, underscore:  _  ou  cifrão:  $
+)
+
+
+
+ 
+var nome = "Texto qualquer "+ 2 +" 55 em string " + " outros texto " + outraVar + 35   - Concatenaçãoes em uma var, Como pode ver uma var pode ter muitas coisas (diferentes) atribuidas a ela, 
+
+isso respeitando a regra de concatenação com o  +  que junta os conteudos diferentes. AVISO: Se existir soma e concatenação juntas vai contar tudo como Concatenação, 
+
+pra resolver isso coloque (parenteses) nas somas, exemplo: (5+6) assim o JS prioriza primeiro a Soma.
+
+
+
+ 
+let nome= conteudo - mesma coisa do var porem se for declarada dentro de um bloco{} só funcionara dentro dele e não fora
+
+
+
+typeof conteudo - Identifica o tipo do Conteudo inserido se é str,number
+
+parseInt(conteudo) - Converte o Conteudo Para o Tipo Numero Inteiro (necessario a atribuição a uma var antes para ter o valor da conversão salvo para ser usado)
+
+parseFloat(conteudo) - Converte o Conteudo Para o Tipo Numero Flutuante
+
+var_tipoFloat.toFixed(2) ||| Limita as Casas decimais a "2" ou o numero colocado no (). (só funciona em uma var ja atribuida)
+
+Number(conteudo) - Converte Conteudo para tipo Numero
+
+String(conteudo) - Converte o  Conteudo Para O Tipo Sting 
+ 
+(`${conteudo do nome da var}`) - Exibe o conteudo dentro da var (é preciso usar esse `` tipo de virgula dentro do bloco)
+
+conteudo.length - Ver O Numero De Letras Em Um Conteudo ( usar Dentro de um document.write)
+
+conteudo.toUpperCase() - Deixar Caracteries em Maiusculas (usar Dentro de um document.write)
+
+conteudo.toLowerCase() - Deixar Caracteristicas em Minusculas (usar Dentro de um document.write)
+
+console.log(conteudo) - Ver açoes no console
+
+(dentro de um document.write por exemplo, para usar elementos de formatação de html colocasse <conteudo tag> no local onde dessa ser aplicado </conteudo tag>)
+
+conteudo.toFixed(conteudo do numero de casas decimais) - Aumentar numero de casas decimais de um numero (no document.write)
+
+conteudo.replace("conteudo a ser trocado","conteudo para por no lugar") - Troca Numeros/simbolos por outro (não sei se é só numero?) 
+
+conteudo.toLocaleString("conteudo de qual local", {style: "conteudo", conteudo: "conteudo para ser usado"}) - Altera uma String dependendo do local e região de onde a pessoa acessa?
+
+
+
+
+Ordem De Precedencia De Operaçoes Matematicas:
+
+1: parenteses:() 
+2: potencia: ** 
+3: multiplicação: * 
+3: divisão: / 
+3: Resto da Divisão: %
+4: Soma: +
+4: Subtração: -
+
+
+
+
+nome da var tipo numerica exemplo: n
+
+n++ ||| Pós Incremento, Variavel recebe mais 1 em seu valor Depois da execução de toda sua linha;
+
+n-- ||| Pós Decremento, Variavel subtrai menos 1 em seu valor Depois da execução  de toda sua linha;
+
+++n ||| Pré Incremento, Variavel recebe mais 1 em seu valor Antes da execução  de toda sua linha;
+
+--n ||| Pré Decremento, Variavel subtrai menos 1 em seu valor Antes da execução  de toda sua linha;
+
+
+                                       AUTO-ATRIBUIÇOES A VARIAVEL
+
+
+n+= conteudo numerico - Soma o valor informado a Variavel
+
+n-= conteudo numerico - Subtração do valor informado a Variavel 
+
+n*= conteudo numerico - Multiplica o Valor informado a Variavel
+
+n/= conteudo numerico - Divide o valor informado a Variavel
+
+Daria o msm se fosse feito: n = n+2 (tds operadores)
+
+**se a concatenação for entre variaveis de "str" é obrigatorio ser +=  (com o + do lado esquerdo do =) 
+
+(Não funciona se a escrita usar Var na declaração, exemplo  var n+= )
+
+
+
+
+Operadores Relacionais:
+
+>   Maior
+<   Menor
+>=  Maior ou igual
+<=  Menor ou igual 
+==  Igual 
+=== Identico 
+!=  Não igual
+
+Operadores Logicos:
+
+
+! negação
+&& AND
+|| OU (Localizado no "\" com shift no telado)
+
+Procedencias Dentre Operadores:
+
+1: Aritimeticos: (), **,*, /, %, +,-
+2: Relacionais: > , <, >=   (todos os relacionais tem a mesma ordem de precendencia)
+3: Logicos: ! ,&&, ||
+
+3 > 4 ? Conteudo se for Verdadeiro : Conteudo se for Falso - Operador Ternario, se a condição for TRUE recebe oq foi escrito dps do "?" se for falso dps do ":"
+
+
+
+                                        DOM
+
+
+
+document.getElementsByTagName("nome da tag")[numero da ordem da tag] - Pega o conteudo da tag informada (numero da ordem da tag começa com 0 até o numero que a msm tag esta no documento)
+
+
+(Todos Comandos Abaixo com o nome de "taghtml" Levam em consideração que a Tag html foi importada para o JavaScript pelo Método GetDocument e Armazenada em uma Var)
+
+
+Exemplo de Estrutura da Arvore Dom de um site:
+
+
+
+window.document.body.style.background = "Conteudo De Nome De Uma Cor"  - Trocar cor do Background/fundo do site. Esse é o exemplo De selecionar UM dos varios Elementos que existem dentro da Arvore DOM De um Site
+
+Indo desda window, até ao Style(CSS), Body, HTML etc... Repare que a ordem do window.document.body.style e etc... Sempre tem que ser assim, isto é, seguindo o próprio cronograma de precedencia da Arvore DOM  
+
+Sendo que as vezes obrigatoriamente precisa começar citando pelo pelo desde o document. como no caso de mexer com o Style do Body, ja outras pode espeficar condiçoes mais tardias como no caso da taghtml.style.color
+
+
+
+taghtml.style.background = document.body.style.background - Tambem é possivel alterar para valores ja definidos de outros elementos do site. 
+
+nesse caso a cor do background da "taghtml" ficaria igual a referencia depois do =  document.body.style.background
+
+
+
+
+taghtml.style.color = "Conteudo De Cor"  -  Muda A Cor Do Texto:
+
+taghtml.style.color = "blue" - Pelo Nome
+
+taghtml.style.color = "#00ACEE" - Codigo Hexadecimal
+
+taghtml.style.color = "rgb(0,172,238)" - Codigo RGB
+
+
+taghtml.style.color = taghtml2.style.color - Tambem é possivel alterar para valores de outros elementos do site, nesse caso a cor do texto fica igual ao da tag referida depois do = taghtml2
+
+
+
+taghtml.style.textAlign = "conteudo de posição" - Alinha o Texto em uma posição, exemplo: "center"
+
+taghtml.innerText - Pega Só o Texto dentro tag (exibir no document.write)
+
+taghtml.innerText = conteudo - Injeta, assim substituindo o texto da tag para oq escreveu dps do =
+
+taghtml.innerText += conteudo - Acrescenta ao lado do texto da tag oq escreveu dps do +=
+ 
+
+taghtml.innerHTML - Todo o conteudo formatado em HTML da tag (Exibir no document.write)
+
+taghtml.value - Pega o conteudo digitado pelo usuario (dentro de um input por exemplo)
+
+
+document.createElement("conteudo nome da tag")  - Cria um Elemento/Tag Dinamicamente (Pelo Java Script) exemplo: ("input")
+
+tagCreateElement.setAttribute("conteudo nome Atributo","conteudo especifição pro Atributo")  - Adiciona um Atributo e valor a ele a tag criada, exemplo ("id","nomeid") ("src","local_do_arquivo.tipo") ("type","number") etc...
+
+(o .setAttribute só funcinou com uma var de createElement ja atribuida e não direto no createElement.  (???))
+
+
+taghtml.appendChild(tagCreateElement) - Coloca o Elemento Criado dentro da tag referida (para de fato visualiza-lo no site) 
+
+
+taghtml
+
+document.getElementsByTagName("nome da tag")[numero da ordem da tag].style.color = "blue" - Muda a cor de uma tag html (atribua o getElement a uma var prória se for usar o msm comando muitas vezes)
+
+window.document.body.style.background = "cor desejada" - muda a cor do corpo da pag (atribua o codigo a uma var se for usalo muitas vzs )
+
+(HTML) <tag id="conteudo"> </tag> - Adiciona um Id identificador a uma tag especifica
+
+document.getElementById("nome da id") - pega o conteudo da id indicada (exibir no document.write com um .inner dps do comando/var)
+
+document.getElementsByName("nome do name") - pega o conteudo do nome indicado 
+
+document.querySelector("nome da tag e nome do indificador e simbolo do indificador") - (se o indificador for um id o simbolo dele é um # se for um class é um . ) exmp: id: div#nome_da_id class: div.nome_class
+
+(HTMl) <tag onclick="nome da função()"> </tag> - Quando o Mouse clikcar na tag
+
+(HTML) <tag onmouseenter="nome da função()"> </tag> - Quando o Mouse estiver dentro da tag
+
+(HTML) <tag onmouseout="nome da função()"> </tag> - Quando o Mouse sair da tag
+
+(HTML) <tag onload="nome da função()"> </tag> - Assim que a tag carregar (só funcina na tag body ??) 
+
+(JAVASCRIPT) 
+
+
+document.getElementById("nome do id").addEventListener("click",nome da função) - quando clickar no elemento da id atribuida ativa a função definida
+
+document.getElementById("nome do id").addEventListener("mouseenter",nome da função) - quando o mouse estiver dentro do elemento da id atribuida ativa a função definida
+
+document.getElementById("nome do id").addEventListener("mouseout",nome da função) - quando o mouse sair do elemento da id referida ativa a função definida 
+
+(Atribua o getElementbyid a uma var especifica se for usar o msm comando mts vezes)
+
+conteudo.value - Pega o valor dado em um conteudo (geralmente de pronts ou inputs) (exibir document.write)
+
+Number(conteudo.value) - Converte o valor dado do conteudo para o tipo "Numero"
+
+(CSS) tag#nome do id - Pega a Id de um Elemento para altelaro individualmete no style do CSS
+
+(Para usar o Console.log do Visual Studio Code apertar "F5" e permitir a confiança de usar arquivos de trabalho  e dps na tela do script.js "F8" para executar as açoes do console)
+
+
+
+
+
+function nome da função(parametros){conteudo da função} - Função: Uma serie de açoes ja programadas 
+
+*Parametros são conteudos que a função vai usar porem que vão variar
+
+*Uma Var Criada Dentro de uma Função Só ira Funcionar Dentro Dela, Mas uma função pode acessar uma Var Global Normalmente
+
+*Sabendo dessa sobre a Var "refem da Function" então voce pode somente declarar uma Var fora da Function,
+ E depois que ela ja ter sido criada fora (assim sendo uma Var global), que voce atribui conteudos para ela dentro da Function mesmo.
+Ai na atribuição dessa Var dentro da Function a sintaxe tem que ser só:   nomevar = conteudo  ** sem a palavra "var" antes na declaração**
+ 
+
+  
+
+
+function nomeF (n1,n2) {
+var soma = n1+n2;   
+return `A Soma de ${n1} + ${n2} é = a ${soma}`;
+} 
+
+return - Retorno, Retorna um valor/conteudo feitos na função com os parametros solicitados no ()
+
+*Ai para guardar esse resultado utilizar uma var com essa Função e Parametros nomeF(5,6) e para exibir no Document.write, Console Log etc...
+
+
+*poderia colocar n1=0 , n2=0 nos parametros porque se caso algum dos dois não fossem informados iam ficar como 0 (não anulando a conta toda)
+
+
+
+
+
+
+if (conteudo de condição>conteudo de condição) {conteudo para executar se for verdadeira} - IF: Se tal condição for verdadeira (maior,menor,igual) executa os codigos dentro do bloco{}
+
+if(){} else {Conteudo para Executar caso o If Anterior dar Falso} -  If Else, Else Só pode ser usado Depois de um If, que se sua Condição der Falsa então executa os comandos dentro do {Bloco} do Else
+
+else if(condição) {conteudo se a condição anterior for verdadeira} - Else If, Só pode ser usado depois de outro If anterior que se sua condição deu falsa executa esse Else If com outra Condição() e execução de codigo dentro do bloco{} 
+
+E assim infinitamente com quantas condiçoes e açoes necessarias 
+
+sempre nessa ordem: If(){}  Else if (){}  Else if(){}  Else  (o IF tem que ser o Primeiro e só o Else o Ultimo)
+
+
+
+
+
+
+
+
+new Date().get - Recursos de Datas reais como horario,ano,mes etc... no "get" getHours() para horas, getMinutes() para minutos e etc.. (atribuir o comando a uma variavel propria se for usalo mts vezes)
+
+
+
+switch(conteudo) {
+case  for tal conteudo:  comandos a serem executado; break; case for outro conteudo: comandos a serem executados; break; 
+default: comandos a serem executados se nenhum dos casos anterior forem atinjidos; break} 
+
+
+
+- Switch Case: Executa diferentes açoes nos case dependendodo do que for o conteudo indicado no() e se nenhuma das possibilidades dos cases bater com o conteudo tem o default para executar algo mais vago 
+
+(exemplo var anos = prompt; switch (anos) {
+case 5: document.write("criançinha"); break; case 18: document.write("adolecente"); break; 
+case maior que 70: document.write("Velho"); break; default: document.write("não sei oq vc é"); break}
+
+(obs: os pontos e virgulas no meio da estrutura são pela mesma regra de que se numa estrutura JS outro comando estiver na mesma linha doq outro tem que ter o ; separando ou pular para outra linha de um comando para o outro) 
+
+
+
+
+
+document.getElementById("id da imagem").src="local da imagem.formato da imagem" - Buscar e atribuir uma imagem ao elemento, assim substituindo a anterior  
+
+
+
+
+
+
+while (conteudo1<conteudo2) {executa tal ação; e conteudo1++ } - While: Loop, enquanto a condição do () for verdadeira executa oq estiver dentro do bloco {} (e que neste bloco tenha uma alternancia para a condição verdadeira 
+ficar falsa uma hora e parar a execução do bloco)
+
+(exemplo: var i=5; while(i<10){document.write("estou escrevendo") i++} - no caso o documento.write vai ser executado e a var i(5) vai ser adicionado mais 1 no seu valor por causa do "i++" no final do bloco, fazendo a execução parar
+quando a var i(5) chegar em 10 e dando falsa a condição, parando assim a execução do document.write 
+
+do{executa tal ação; e  conteudo1++}while(conteudo1<conteudo2) - Do While, msm coisa do While ''normal'' só que executa o comando pelo menos UMA vez antes
+
+for(var i=1;i<6;i++){executa essa ação} - while comprimido
+
+exemplo: for(variavel i=1 ;enquanto a condição i<6 for verdadeira; incremento para mudar a variavel i++){executa o comando document.write(`DBZ ${i}`)}
+
+
+
+
+ARRAYS:
+
+
+var nome = [conteudo1,conteudo2,conteudo3] - Arrays: uma variavel (var ou let) que guarda varios valores.
+
+nomevar[2] - especifica um local numerico da array para pegar o conteudo que foi guardado nele e usar em um document.write por exemplo
+(a numeração de identificação de arrays começa sempre pelo 0, exemp: var nome = [1,2,3,4]; document.write(nome[3]) ele escreveria o numero "4" da var "nome" na tela)
+
+var nomevar = [conteudo1,conteudo2,conteudo3]; nomevar[3] = conteudo4 - Acrescenta mais um valor a um array da variavel que não esteja ocupado, e caso for que ja tenha algo substitue
+
+nomevar.push(conteudo) - acrescenta a variavel mais um valor dps do ultimo array
+
+nomevar.length - informa o numero de arrays(setores) que a variavel tem (ver dentro de um document.write)
+
+nomevar.sort() - ordena em ordem crescente os numeros das arrays   
+
+nomevar.indexOf(conteudo a ser buscado dentro do array); - Faz uma busca do conteudo dentro da var array e retorna o vetor onde ele esta, se não encontrar retorna como -1 (exibir document.write, console.log)
+
+
+for( var vetor in arrayVar ){
+    console.log(`Vetor ${vetor} Armazena ${arrayVar[vetor]}`) - For(while) especifico para todas as posiçoes e seus conteudo de um array (nessa caso apareceria em um console.log mas poderia usar um document.write)
+}
+
+
+
+
+
+OBJETOS:
+
+var nomeobj = {}; ||| Declaração de Variavel como Objeto (Só declaração, Sem conteudo)
+
+var nomeobj = {dado1: conteudo1, dado2: conteudo2, dado 3: conteudo3 }; *não coloca virgula no ultimo dado*
+
+var nomeobj = {[nomevar]: conteudo} ||| Nome do dado igual a o conteudo de uma Variavel
+
+*Podemos colocar arrays dentro do objeto e até mesmo outro objeto sem problema
+
+
+* daqui por diante obj significa uma var objeto*
+
+obj.dado ||| Pega somente o conteudo dentro do dado referido
+
+obj.dadofunção(parametro) ||| Colocar parametro em uma função de um dado do Objeto
+
+obj["nome-do-dado"]  ||| Segunda forma de pegar conteudo de um dado, usada quando o nome do dado é meio irregular
+
+
+obj.dado = conteudo   ||| Adiciona mais um dado na ultima posição do Objeto
+
+delete obj.dado; ||| Deleta o dado do Objeto
+
+
+var juncao = Object.assign({}, obj1, obj2, ob3) ||| Junta Objetos em um NOVO. (Precisa ser armazenado em uma var)  
+
+Object.assign(obj1, obj2, ob3) ||| Junta Objetos no "obj1" de fato  (não criando uma nova Var da junção)
+
+
+
+
+
+
+
+
+\u{Conteudo codigo emoji} - Emoji no Javascript, usa o msm codigo do HTML porem tira a primeira parte e coloca o \u e o codigo normal depois
+
+exemplo: \u{1F449}
+
+
+OTHERS: 
+
+MATH:
+
+Math.floor(conteudo numero) ||| Se o numero dentro do() for quebrado .float  arredonda para o numero inteiro a Baixo 
+
+Math.round(conteudo numero) ||| Se o numero dentro do() for quebrado .float  arredonda para o numero inteiro a Cima
+
+Math.random() ||| Escolhe um numero entre 0,0 a 0,9 aleatoriamente 
+
+*Para expandir as possibilidades usar: 
+
+Math.random() * (conteudo numero Maximo - conteudo numero Minimo +1) +conteudo numero Minimo  
+
+
+
+

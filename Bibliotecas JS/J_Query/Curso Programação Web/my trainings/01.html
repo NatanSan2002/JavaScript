@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training</title>
+
+<style>
+    body{background: purple; color: white;font-size:22px ;}
+</style>
+</head>
+<body>
+
+<h1>Pegando Valores Dentro de um Iput (Com Jquery)</h1>
+
+<div id="principaldiv" 
+style=" position:relative; top:100px; left:500px; width: 600px; height:400px; background:white; color:black; "> 
+<div style="text-align: center; position:absolute; top:150px;">
+    Digite um Numero Aqui:<input type="number" id="n1" style="width:40px;"> Digite Outro Numero aqui: <input type="number" id="n2" style="width:40px;"> 
+ <input type="button" value="Ok" id="button" style="position:absolute; top:90px; right:290px; width:70px;"> 
+
+<p style="position:absolute; top:120px; left:250px; " id="msg"> </p>
+ </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="../Aulas/js/jquery-3.6.0.js"></script>
+
+<script>
+    $(document).ready(function () {
+        var clicou ;
+        $("#n1").focus(function () {clicou = "sim1" ;}); $("#n2").focus(function () {clicou += "sim2" ;});
+        $("#button").click(function () {
+          var n1 = Number($("#n1").val());
+          var n2 = Number($("#n2").val());
+          var msg = $("#msg");
+          if(clicou != "sim1sim2"){msg.html("Preencha todos os campos!")}else{var soma= n1+n2; msg.html(`A soma foi: ${soma}`)}
+        })
+    })
+</script>
+
+</body>
+
+
+
+
+</html>

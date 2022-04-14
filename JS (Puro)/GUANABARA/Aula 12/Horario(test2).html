@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Horario Real</title>
+        <style>
+            body{background:rgb(34, 4, 4); color:rgb(236, 213, 213);}
+            p#msg{font-size: 30px; color:white;}
+            input#botao{position:absolute; left:500px; width:200px; height:50px;}
+        </style>
+    </head>
+    <body>
+<h1> Clique no Botão Abaixo e o Verei Qual É o Horario Atual</h1>
+<br>
+<input type="button" id="botao" onclick="Hora_Atual()">
+<br>
+<p id="msg"></p>
+
+
+
+
+<script>
+    var exibir = document.getElementById("msg");
+
+    function Hora_Atual(){
+var hora = 12; // Originialmente era pra essa var receber um = new Date().getHours mas n funcionou no navegador fds
+exibir.innerHTML = `Agora São ${hora} horas`; if(hora>=0 && hora <=6)
+{exibir.innerHTML += `<br> Boa Madrugada`; document.body.style.background = "black";} 
+else if (hora>=7 && hora<=12){
+ exibir.innerHTML += `<br> Bom Dia `; document.body.style.background = "blue";   
+}else if (hora>=13 && hora<=18){exibir.innerHTML += `<br> Boa Tarde`; document.body.style.background = "Yellow";}
+else if (hora>=19 && hora<=23){exibir.innerHTML += `<br>Boa Noite`; document.body.style.background = "PURPLE";}
+
+
+    }
+</script>
+    </body>
+</html>

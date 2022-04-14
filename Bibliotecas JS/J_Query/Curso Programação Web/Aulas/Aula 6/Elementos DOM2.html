@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{background:purple;font-size: 21px;color:white;text-align:center;}
+        .red{color:red;}
+        .blue{color:blue;}  
+    </style>
+</head>
+<body>
+ <h1 id="h11"> Manipulando as Açoes DOM</h1><h2 id="h22"> Com Muitos Botoes </h2>
+<br>
+ <a id="linkG"href="https://www.google.com/"><img id="imgG" src="data:image/png;base64,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"> </img> </a>
+ <br>
+ <input id="input1" type="text" placeholder="Digite Algo">
+ <br><br>
+ <div id="divtest">
+<p>PARÁGRAFO</p>
+<p>PARÁGRAFO</p>
+<p>PARÁGRAFO</p>
+<p>PARÁGRAFO</p>
+<p>PARÁGRAFO</p>
+<p>PARÁGRAFO</p>
+
+ </div>
+ <br>
+ <button id="button1"> Adicionar Elemento</button> <br><br>
+ <button id="button2"> Modificar Titulo H2</button> <br><br>
+ <button id="button3"> Atribuir Valor Do Input</button> <br><br>
+ <button id="button4"> Trocar Link Para o do Input</button> <br><br>
+ <button id="button5"> Trocar Imagem Para o do Input</button> <br><br>
+ <button id="button6"> Deletar Titulo H1</button> <br><br>
+ <button id="button7"> Esvaziar Div</button> <br><br>
+ <button id="button8"> Modificar CSS</button> <br><br>
+ <button id="button9"> Remover CSS</button> <br><br>
+ <button id="button10"> Toogle Class</button> <br><br>
+ <button id="button11"> Aumentar Imagem</button> <br><br>
+
+ 
+
+    
+
+
+
+
+
+
+
+
+<script src="../js/jquery-3.6.0.js"></script> 
+<script>
+
+$(document).ready(function () {
+var valori;
+$("#button1").click(function() {$("body").append(`<div style=" margin:1%;width:150px;height:150px; display:inline-block;background:red;">`)});
+$("#button2").click(function() {$("#h22").append(` ${valori}`)});
+$("#button3").click(function() {  valori = $("#input1").val()});
+$("#button4").click(function() {$("#linkG").attr("href",valori)});
+$("#button5").click(function() {$("#imgG").attr("src",valori)});
+$("#button6").click(function() {$("#h11").remove()});
+$("#button7").click(function() {$("#divtest").empty()});
+$("#button8").click(function() {$("#divtest").addClass("red")});
+$("#button9").click(function() {$("#divtest").removeClass("red")});
+$("#button10").click(function() {$("#divtest").toggleClass("red")});
+$("#button11").click(function() {$("#imgG").width("500px");$("#imgG").height("500px")});
+
+
+})
+</script>   
+</body>
+</html>

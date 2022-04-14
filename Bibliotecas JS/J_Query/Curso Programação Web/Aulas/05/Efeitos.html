@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{background: purple; color:white; font-size: 22px;}
+div#red{background:red; width: 200px; height:200px; position:absolute; left:450px; }
+div#blue{background: blue; width: 200px; height:200px; position:absolute; left:700px; }
+div#green{background: green; width: 200px; height:200px; position:absolute; left:950px; }
+
+input#cliqueaqui{height:150px; width:120px; position:relative; top:300px; left:850px;}
+
+input#ocultar{height:150px; width:120px; position: absolute; top:350px; left:700px;} 
+input#exibir{height:150px; width:120px; position:absolute; top:350px; left:850px;}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+    
+
+   <div id="red"></div>
+
+
+
+
+
+    
+
+
+
+
+
+<script src="../js/jquery-3.6.0.js"></script>    
+<script>
+$(document).ready(function () {
+ $("#red").css("background","blue").slideUp().slideDown();   
+})
+
+
+    
+
+
+
+
+
+
+</script>
+</body>
+</html>

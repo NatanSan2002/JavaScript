@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+Clique Aqui: <input id="button" style="width:80px; height: 50px;"type="button" value="Click 2x"> 
+Passe Aqui: <input id="button2" style="width:80px; height: 50px;"type="button" value="Pass">
+<br> <br>
+<input type="text" placeholder="Digite Aqui" id="boxtext">
+
+<span id="msg" style="position: relative; top: 70px;"></span>
+<br> <p> Vergonha</p> / <p> Vergonha</p> / <p> Vergonha</p> / <p> Vergonha</p> / <p> Vergonha</p> /
+
+
+
+<p id="rapidao">HADOUKEN</p>
+
+
+
+
+
+    <script src="../js/jquery-3.6.0.js">  </script>
+    
+    <script> 
+    
+    $("#button").dblclick(function () {
+        $('#msg').html("Parabens o Método Onclick do J_Query Funcionou!!!");
+        $("p").hide();
+        })
+        
+
+$("#button2").mouseenter(function () {
+$("#msg").html("O Mouse Esta Por Dentro")
+})
+
+$("#button2").mouseleave(function () {
+$("#msg").html("O Mouse Saiu de Dentro")
+})
+
+    $("#msg").click(function () {
+        $(this).html("Mudei Dnv :P")
+    })
+    
+
+    $("#boxtext").focus();
+    
+    $("#boxtext").blur(function(){
+        $(this).css("background","red");
+        $(this).css("color", "white");
+    })
+    
+
+    $("#rapidao").css("color","blue");
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+body{background:purple;font-size: 22px; color:white;}    
+</style>
+</head>
+
+<body>
+    <h1> TESTE H1</h1>
+    <hr>
+    <input type="text" id="texto" placeholder="Digite Algo">
+ <a href="https://google.com" id="link"> Link para o Google </a> <input type="button" value="Ok">
+    
+
+<a href="" id="spant1"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<script src="../js/jquery-3.6.0.js"></script>  
+<script>
+$(document).ready( function () {
+ //ALERT TEXT OF H1  
+var textoH1 = $("h1").text();
+$("h1").click(function () {alert(textoH1);})
+
+//WHEN EXIT OF INPUT ALERT THE VALUE HIM
+$("#texto").blur(function () {
+var valor = $(this).val(); 
+alert(`Foi Digitado o Valor: ${valor}`);
+
+
+})
+
+//TO ASSING LINK OF A TAG FOR OTHER WHEN CLICK IN BUTTON
+$("input").click(function () {
+var link = $("#link").attr("href");
+$("#spant1").html("Recebi o Link!");
+$("#spant1").attr("href",link);
+
+
+} )
+
+
+})
+</script>  
+</body>
+</html>

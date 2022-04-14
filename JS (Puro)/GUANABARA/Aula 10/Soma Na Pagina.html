@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        div#exibir{margin-top:25px;}
+    </style>
+</head>
+<body>
+    <h1> SOMANDO VALORES </h1>
+    <input type="number" name="txtn1" id="txtn1">                                 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="SOMAR()">
+    <div id="exibir">  Resultado </div> 
+     
+    
+
+    <script>
+      
+
+      function SOMAR(){
+        var tn1 = document.getElementById("txtn1");
+      var tn2 = document.getElementById("txtn2");
+      var exibir = document.getElementById("exibir");
+      
+      var n1 = Number(tn1.value);
+      var n2 = Number(tn2.value);
+
+
+      var soma = n1+n2;
+
+        
+        
+        
+        
+        exibir.innerHTML = `  A Soma Entre ${n1} e ${n2} é = `+ `<strong> ${soma} </strong>` };
+
+   // Neste Caso é Obrigatorio As Variaveis Estarem Dentro da Function, Pois Só Deve pegar o Valor dentro dos Inputs qndo de Fato for ativado a função com o Click()
+   // Se Não As variaveis vão pegar o Valor Antes mesmo do Usuario Digitar um Numero e a unica coisa que a função vai fazer é exibir esses valores anteriores Mortos
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+ body{text-align: center; font:normal 22px arial;}  
+ .positon{position:relative; top:30px;} 
+ .positondiv{position:relative; top:150px;}
+ .positon4{position:relative; top:250px;}
+ 
+</style>
+</head>
+<body>
+<h1> Teste De Idade</h1>
+<div id="divgeral">
+<span class="positon"> Digite o Ano do seu Nascimento: </span><input type="number" id="idade" class="positon">
+<input type="button" value="OK" onclick="CalcularIdade()" class="positon">
+<p class="positon">
+    <input type="radio" name="radsex" id="masc" checked>
+<label for="masc"> Masculino </label>
+<input type="radio" name="radsex" id="fem">
+<label for="fem"> Feminino </label>
+
+</p>
+
+<br>
+
+
+
+<div class="positondiv" > 
+
+</div>
+
+</div>
+
+<p id="resultado" class="positon4">  </p>
+
+<script>
+function CalcularIdade() {
+var idade = document.getElementById("idade").value;
+var exibir = document.getElementById("resultado");
+var img = document.createElement(`img`); 
+img.setAttribute("id","imagem");
+var ano = Number(idade);
+var ano_atual = new Date().getFullYear();
+var idade_atual = ano_atual - idade;
+var div = document.getElementById("divgeral");
+
+var genero = document.getElementsByName("radsex");
+
+exibir.innerHTML =` Voce Tem ${ idade_atual} anos! `; 
+ if( idade_atual==1 || idade_atual ==0){exibir.innerHTML =` Voce Tem ${ idade_atual} ano!`;}; 
+ if (idade_atual<0){exibir.innerHTML =  `Voce tem ${idade_atual} anos ??? Digite uma data Valida!`;}
+
+ //MASCULINO 
+else if(genero[0].checked && idade_atual<=10 ){exibir.innerHTML += " E é um menino <br>"; document.body.style.color ="white "; 
+document.body.style.background = "rgb(5, 11, 90)"; div.style.background = document.body.style.background ; img.setAttribute("src","imgs/kidboy.jpg") } 
+
+else if(genero[0].checked && idade_atual<=18 ){exibir.innerHTML += " E é um Rapaz <br>"; document.body.style.color ="white "; 
+document.body.style.background = "rgb(5, 11, 90)"; div.style.background = document.body.style.background; img.setAttribute("src","imgs/teenboy.jpg") } 
+
+else if(genero[0].checked && idade_atual<=40 ){exibir.innerHTML += " E é um Homen <br>"; document.body.style.color ="white "; 
+document.body.style.background = "rgb(5, 11, 90)"; div.style.background = document.body.style.background; img.setAttribute("src","imgs/adultboy.jpg") } 
+
+else if(genero[0].checked && idade_atual<=150 ){exibir.innerHTML += " E é um Velho <br>"; document.body.style.color ="white "; 
+document.body.style.background = "rgb(5, 11, 90)"; div.style.background = document.body.style.background; img.setAttribute("src","imgs/velho.jpg") } 
+
+
+
+//FEMININO
+
+else if(genero[1].checked && idade_atual<=10 ){exibir.innerHTML += " E é uma menina <br>"; document.body.style.color ="black "; 
+document.body.style.background = "pink";div.style.background = document.body.style.background;  img.setAttribute("src","imgs/kidgirl.jpg") } 
+
+else if(genero[1].checked && idade_atual<=18 ){exibir.innerHTML += " E é uma moça <br>"; document.body.style.color ="black "; 
+document.body.style.background = "pink"; div.style.background = document.body.style.background; img.setAttribute("src","imgs/teengirl.jpg") } 
+
+else if(genero[1].checked && idade_atual<=40 ){exibir.innerHTML += " E é uma Mulher <br>"; document.body.style.color ="black"; 
+document.body.style.background = "pink";div.style.background = document.body.style.background;  img.setAttribute("src","imgs/adultgirl.jpg") } 
+
+else if(genero[1].checked && idade_atual<=150 ){exibir.innerHTML += " E é uma velha <br>"; document.body.style.color ="black "; 
+document.body.style.background = "pink"; div.style.background = document.body.style.background; img.setAttribute("src","imgs/velha.jpg") } 
+
+
+  
+else {exibir.innerHTML = `Voce tem ${idade} anos??? Digite uma data Valida!`;}
+
+
+exibir.appendChild(img); // Tem que ser colocado Por ultimo ou ao menos depois do comando setAtribute(src,imagem.jpg) Pra exibir a imagem de fato
+}
+
+
+</script>
+</body>
+</html>

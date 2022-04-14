@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt*br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{color:white; background:purple; font-size:21;}
+        
+    </style>
+
+</head>
+
+<body>
+    
+
+    Search: <input placeholder="Key Here" id="busca">
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Second Name</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody id="tabela">
+        <tr>
+            <td>Carlos</td>
+            <td>Alberto</td>
+            <td>joshua@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Ricardo</td>
+            <td>Piologo</td>
+            <td>richardpiolog@gmail.com</td>
+        </tr>
+        <tr>
+            <td>Rodrigo</td>
+            <td>Silva</td>
+            <td>adventis7day@gmail.com</td>
+        </tr>
+        </tbody>
+        
+     </table>
+
+<hr>
+
+ Buscar na listinha:<input type="text" id="inputlistinha" >
+
+<ul id="lista">
+    <li> Arroz</li>
+    <li>Feijão</li>
+    <li>Leite</li>
+    <li>Carne</li>
+</ul>
+
+
+
+
+
+
+
+
+ <script src="../js/jquery-3.6.0.js"></script>   
+
+
+ <script>
+$(document).ready(function () {
+    $("#busca").keydown( function () {
+    var valor = $(this).val().toLowerCase();
+    
+    $("#tabela tr").filter(function () {
+       $(this).toggle($(this).text().toLowerCase().indexOf(valor)>-1);
+    })
+})
+
+$("#inputlistinha").keyup(function () {
+var valor = $("#inputlistinha").val().toLowerCase();
+
+$("#lista li").filter(function () {
+$(this).toggle($(this).text().toLowerCase().indexOf(valor) >-1);
+})
+})
+
+})
+
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+      body{
+          text-align: center;
+        }
+        button{width:300px; padding:10px; display:block;}
+        .resposta{margin: auto auto;margin-bottom:1%;}
+        button#bconfirm{
+            margin: auto auto;background:rgb(82, 252, 82);border: none;color:white;
+        border-radius: 10px;}
+        button#bconfirm:hover{background:rgb(1, 160, 1);}
+        .resposta:hover{background:yellow; cursor: pointer;}
+        .resposta.selecionada{background:red;}
+        .errada{background:red;color:white;}
+        .certa{background:green; color:white; animation: piscaCerto 0.5s infinite;}
+
+        @keyframes piscaCerto{
+            0%,
+            49%{
+                background:green;
+            }
+            50%,
+            100% {
+                background:seagreen;    
+            }
+
+        }
+  </style>
+</head>
+<body>
+ 
+    <h1 style="text-align:center;" class="01phase">Small Quiz!!!</h1>
+
+<div class="quiz">
+   <h2 id="pergunta">Quest</h2>
+   <div id="divrespostas">
+   <button id="resposta0" class="resposta"> Resposta 1</button>
+   <button id="resposta1" class="resposta"> Resposta 2</button>
+   <button id="resposta2" class="resposta"> Resposta 3</button>
+   <button id="resposta3" class="resposta"> Resposta 4</button>
+   </div>
+   <br><br>
+   <button id="bconfirm"> Confirmar</button>
+
+
+</div>
+
+
+
+ 
+    
+
+ <script src="../js/jquery-3.6.0.js"></script>  
+ <script src="quiz.js"></script>
+
+</body>
+</html>

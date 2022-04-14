@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+</head>
+<body>
+    
+<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio modi, 
+    debitis quia culpa doloremque earum expedita iure facere consectetur, 
+    ab accusantium animi voluptate quam, voluptatum eaque nulla dolores iste accusamus!</p>
+
+
+    <p id="testID"> Parágrafo Teste ID </p>
+
+
+<p class="testClass"> Parágrafo Teste Class</p>
+
+<span class="testClass"> Span Teste Class</span>
+
+
+
+
+
+
+
+
+
+
+    <script src="../js/jquery-3.6.0.js"> </script>
+    <script>
+/* Altera todas as Tags "p"
+        $(document).ready(function(){
+         $('p').html('<strong>Inserido com J_Query</strong>');
+        });
+        */
+
+       /* Altera o Elemento com o ID "testID" 
+       $(document).ready(function() {
+         $('#testID').html("<strong> TEST ID Pego</strong>")   
+        }) */
+
+
+       /* Altera os Elementos com a Classe "testClass" 
+       
+        $(document).ready(function () {
+       var a = $('.testClass').html("<strong> Teste Class pega </strong> ")    
+        })
+*/ 
+
+$(document).ready(function () {
+$("p.testClass").html("<strong> Só os P da classe: test Class </strong>");
+})
+       
+
+
+        /* Teste com uma Var atribuida ja
+        var a = $('.testClass');
+       /a.html("TESTE COM A VAR"); */
+       
+        
+
+
+        
+    </script>
+</body>
+</html>

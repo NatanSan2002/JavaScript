@@ -1,0 +1,35 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title> Horarios Dinamicos</title>
+    <style>
+        body{font-size:25px;}
+    </style>
+</head>
+<body>
+<h1> Que Horas São?</h1>
+<br>
+Digite A Hora Atual: <input type="number" id="inputHORA">
+<input type="button" value="Confirmar" onclick="horario()">
+<br>
+<p id="exibição">
+
+</p>
+
+<script>
+    function horario(){
+        var hora = document.getElementById("inputHORA");
+        var hora = Number(hora.value);
+        var result = document.getElementById("exibição");
+       
+        if (hora>23){result.innerHTML = `Por favor Digite pelo formato de 24h´s`} else{result.innerHTML = `Agora São ${hora} horas`;}; if(hora>0 && hora<7)
+        {result.innerHTML += `<br> Boa Madruga `; document.body.style.background = "purple"; document.body.style.color = "white"}
+        else if (hora>6 && hora<=12){result.innerHTML += `<br> Bom Dia!`; document.body.style.background = "blue"; document.body.style.color = "white";}
+        else if (hora>12 && hora<=18){result.innerHTML += `<br> Boa Tarde !`; document.body.style.background = "orange"; document.body.style.color = "white";}
+        else if (hora>18 && hora<=23){result.innerHTML += `<br> Boa Noite!`; document.body.style.background = "Black"; document.body.style.color = "white";}
+
+    }
+</script>
+</body>
+</html>

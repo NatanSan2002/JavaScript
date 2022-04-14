@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body{background:purple; font-size:25px; color:white;}
+        div#area{
+            color:black;
+            background:rgb(55, 248, 55);
+            width:200px; height:200px;
+            line-height: 200px;  /*Ajusta o Conteudo Interno Da Div pela a altura*/
+            text-align: center;  /*Ajusta o Conteudo Interno Da Div pelos lados*/
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="area"  onclick="Mudar_Texto()" onmouseenter="Mudar_Color()" onmouseout="Original()" Onclicks com funçoes no HTML  -->
+        <div id="area">
+      Click Here
+    </div>
+    <h1 style="visibility:hidden;"> ESCURIDÃO !!!</h1>
+
+
+
+
+    <script>
+        
+        var divori = document.getElementById("area").innerText;
+        var div = document.getElementById("area");
+        div.addEventListener("click",Mudar_Texto);
+        div.addEventListener("mouseenter",Mudar_Color);
+        div.addEventListener("mouseout",Original);
+
+    
+    function Mudar_Texto() {
+        var div1= document.getElementById("area");
+    div1.innerText = "CliCou Parabens"; div1.style.background = "red"
+};
+
+function Mudar_Color() {
+    var div1 = document.getElementById("area");
+   div1.style.background = "yellow";
+   div1.innerText = "Dentro";
+   
+    document.getElementsByTagName("body")[0].style.background = "black"
+    document.getElementsByTagName("h1")[0].style.visibility = "visible"
+
+
+};
+
+function Original(){ var div1 = document.getElementById("area");
+ div1.innerText = divori; div1.style.background = "green";
+
+ document.getElementsByTagName("body")[0].style.background = "purple";
+    document.getElementsByTagName("h1")[0].style.visibility = "hidden";
+}
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{font-size:23px; font-family:Arial, Helvetica, sans-serif;}
+        div#opcoes{position:absolute;top:270px;left:750px;}
+        div > input{
+            background:blue; color:white;border-radius:18%;width:170px; height:70px;
+            box-shadow: 1px 1px 1px blue; border:0px;
+            font-weight:normal;
+            
+        }
+
+        input#ok{position:relative;top:20px;left:110px;}
+        
+    </style>
+</head>
+<body>
+    <h1>Calculadora Quebrada</h1>
+
+    <p>Há uma calculadora quebrada que tem o número inteiro startValueem sua tela inicialmente. Em uma operação, você pode:
+
+    multiplique o número exibido por 2, ou
+    subtrair 1do número exibido.
+    Dados dois inteiros startValuee target, retorne o número mínimo de operações necessárias para exibir targetna calculadora .</p> <a href="https://leetcode.com/problems/broken-calculator/" target="external"> Link Do Exercicio Original</a>
+
+<hr>
+
+<h1 id="start"></h1> 
+<div id="opcoes">
+    <input type="button" value="Multiplicar x2?" onclick="m2x()"> Ou <input type="button" value="Subtrair -1 dele?" onclick="menosUm()"> <br> <input id="ok" type="button" value="OK" onclick="Operations()">
+</div>
+<br><br>
+
+<h2 id="resultado">aa</h2>
+
+
+
+<script src="script.js"></script>
+    
+</body>
+</html>

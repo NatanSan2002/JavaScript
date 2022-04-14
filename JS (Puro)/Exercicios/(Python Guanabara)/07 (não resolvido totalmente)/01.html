@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    p#exibirsoma{font-size: 3em;}
+</style>
+</head>
+<body>
+<H1> Média Aritimetica</H1>
+<br>
+Digite o Primeiro Numero:<input type="number" id="1">
+Digite o Segundo Numero: <input type="number" id="2">  
+<input type="button" value="Ok" onclick="OK()"> 
+<input type="button" value="Adicionar Mais Campo" onclick="add()">  
+<br><br><hr>
+<h1 id="exibirt"></h1>
+<p id="exibirsoma"></p>
+
+
+
+
+
+
+
+<script>
+     var num = [];
+     
+
+    var exibirt = document.getElementById("exibirt");
+    var exibirsoma = document.getElementById("exibirsoma");
+
+    
+
+   //Os Valores dos Inputs Adicionais estão como NaN corrigir.
+    
+    function OK() {
+       
+        num[0] = document.getElementById("1");
+        num[1] = document.getElementById("2");
+
+        for(i=0;i<cElements.length;++i)
+        {num[num.length] = document.getElementById(i+3);
+            console.log(`Vetor ${num.length-1} do Num Recebe Elemente de ID: ${i+3}` )
+        }
+        
+
+    for(i=0;i<num.length;++i){
+        num[i] = Number(num[i].value);
+        console.log(`vetor${i} Recebeu valor ${num[i]}`) 
+    }
+
+
+
+
+
+
+
+    /*function media(n1) {
+        var somanum;
+    for(i=0;i<n1.length;++i){
+        somanum += n1[i];
+        console.log(`fodase`)
+        var divisao = i; 
+    }
+    return somanum / divisao;  
+    } */
+
+        
+
+        if(num.indexOf("") != -1){
+        
+        
+      
+       exibirt.innerHTML = "(Algum Dos Parãmetros estão vazios Considerando-os Como 0)";
+       exibirt.innerHTML += "Média: "; exibirsoma.innerHTML=  media(num);} else{
+        exibirt.innerHTML = "Média: "; exibirsoma.innerHTML = media(num);   
+       }
+
+
+}
+let cElements = [];   
+let vetor = 0;
+function add() {
+
+
+
+
+
+
+cElements[vetor]= document.createElement("input");
+cElements[vetor].setAttribute("type","number");
+cElements[vetor].setAttribute("id",vetor+3);
+
+
+
+
+
+var span = [];
+span[vetor] = document.createElement("span");
+span[vetor].setAttribute("id",vetor+3);
+span[vetor].textContent = "Digite outro numero: "
+
+document.body.appendChild(span[vetor]);
+document.body.appendChild(cElements[vetor]);
+
+
+
+++vetor;
+
+}
+
+
+    
+    </script>
+</body>
+
+
+
+
+</html>

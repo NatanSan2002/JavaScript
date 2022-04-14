@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body{background:purple;color:white;}
+        p#result{font-size: 25px; visibility: hidden;}
+    </style>
+</head>
+<body>
+    <h1> Sistemas De Multas </h1>
+    Velocidade: <input type="number" name="txtvel" id="txtvel"> Km/h
+    <input type="button" value="verificar" onclick="Calcular()"> 
+
+    <p id="result">  </p>
+
+
+
+
+<script>
+ 
+ 
+ function Calcular(){
+      var vel = document.getElementById("txtvel"); 
+      var vel = Number(vel.value);
+      var res = document.getElementById("result");
+ if(vel<40.1){res.style.visibility = "visible"; res.innerText = `A Velocidade é de ${vel} Km/h OK`;}
+else if(vel>40.0 && vel<70.1){res.style.visibility = "visible"; res.innerText = `A Velocidade é de ${vel} Km/h`; res.innerHTML += `<br>Cuidado` ;}
+else{res.style.visibility = "visible"; res.innerText = `A Velocidade é de ${vel} Km/h `; res.innerHTML += `<BR> MULTADO MALUCO VC TA LOUCO!?`}
+
+}
+
+</script>
+</body>
+</html>

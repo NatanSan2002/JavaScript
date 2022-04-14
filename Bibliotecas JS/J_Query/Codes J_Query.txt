@@ -1,0 +1,305 @@
+Baixar Biblioteca no Site Oficial do J_Query, abrirá um txt com os codigos 
+ai é só apertar "ctrl" + "S" para salva-los em um arquivo.js
+
+(esse arquivo .js é a biblioteca J_Query em sí) 
+
+Para  Importar o J_Query no código HTML: <script src="jquery-1.0.0.js"> </script> - Selecionar pela localização do arquivo  Jquery baixado 
+
+
+
+
+CODIGOS
+
+
+
+
+$ ||| Cifrão Indica que é um Codigo do J_Query
+
+
+ ** Todos os EID significa:  Identificador Do Elemento
+
+
+
+
+SELETORES DOM
+
+
+
+$("#nome_ID").html("Conteudo HTML") ||| Seleção pelo ID, Pega o elemento (html) com o ID "nome_ID" e substitui pelo oq colocou/escreveu em HTML no: .html("parenteses")
+
+$("#nome_ID").text("Conteudo texto"); ||| Substitui o texto do elemento pelo especificado
+
+** se não especificar nada dentro do () só atribuiu o que ja estava escrito mesmo 
+
+
+$("EID").attr("conteudo atributo do elemento");  ||| ATTR, Atributo das tags do Elemento.    exemplo: | <a href=""></a>  | o "href" é um atributo da Tag a
+
+parametros(): .attr("conteudo_atributo" , "Valor atribuido a ele") ||| Seleciona o atributo do Elemento e o atribui um valor depois dele no segundo "parenteses"
+
+
+$("EID").val(); ||| Pega o valor de um elemento (inputs por exemplo)
+
+
+$("EID").append("conteduo") ||| Adiciona o conteudo dentro do () seja escrita ou até tags html, ao Elemento  
+
+
+$("EID").remove()  |||  Exclui o Elemento
+
+
+$("#divtest").empty() ||| Esvazia os conteudos do Elemento
+
+
+$("EID").addClass("nome da class") ||| Adiciona a classe ao elemento
+
+
+$("EID").removeClass("nome da class") ||| Remove a classe do elemento
+
+$("EID").toggleClass("nome da class") ||| Verifica se o elemento esta com essa classe, se não Adiciono-a e se sim remove-a
+
+$("EID").width() ||| pega a largura do Elemento 
+
+$("EID").height() ||| pega a altura do Elemento 
+
+*parametros 2 acima:   .width("500px") ||| aumenta o Elemento para o tamanho numerico em px informado 
+
+
+$("EID").filter(function () {}) ||| Separa os elementos da tag para filtra-los de acordo com os comandos dentro do {bloco} da Func ?? 
+
+** Dentro dos comandos do {bloco} da Func colocar $(this) para pegar o filtro da tag que foi filtrada mesmo. 
+
+
+  
+
+$("#nome_ID").html("Conteudo HTML")
+
+* Isso seria a mesma coisa que isso em JS puro:  document.getElementById("nome_ID").innerHTML = "Conteudo HTML"; 
+
+* Ou Seja J_Query se baseia principalmente em Agilizar e Facilitar Comandos do Java Script
+
+
+$('nome_tag') ||| Seleção por Tag, Pega todas as tags html com o mesmo nome que foi selecionado no $('parenteses')
+
+
+$('.nome_Class') ||| Seleção por Classe, Pega o elemento/elementos (html) da classe que foi selecionada no $('parenteses')
+
+
+$("tag_name.nome_Class") ||| Seleção Por tag e Class, Pega o elemento/elementos (html) da Tag e Class Selecionada no $('parenteses')
+
+
+$("EID").children() ||| Pega todos os filhos da tag, isso é, todos os elementos que estão dentro dela.    <tagpai> <filha> </filha> </tagpai>
+
+
+$("EID").children().eq(valor numero) ||| Pega conteudo de acordo com o Valor da posição do Elemento 
+
+
+$(".classname").each(function () {}) ||| Analisa todos os conteudos dessa classe , executando o comando dentro do {bloco} em cada um deles.
+
+
+$("EID").hasClass("nome class") ||| Verifica se o elemento tem/pertence a Classe especificada
+
+$("EID").removeClass("nome class") ||| Remove do elemento a Classe especificada 
+
+
+
+
+
+
+
+
+
+
+                   Variaveis são usadas da mesma maneira, para armezenar um conteudo que pode ser ou alterado, variado, ou que seje muito repetitivo
+
+exemplo: var a = $('#nome_ID');
+         a.html("Conteudo HTML");
+
+
+
+
+
+                     ** Todos os EID significa:  Identificador Do Elemento
+
+
+
+EVENTOS 
+
+
+$("EID").click(function () {}) ||| On Click do JQ, Quando o Elemento Especificado no $("parenteses") for clicado Ativa a Function do .click(parenteses)
+  (tag  #id .class)
+
+
+$("EID").dblclick(function () {} ) |||  Double Click, Quando o Elemento Especificado no $("parenteses") for clicado duas vezes (rapidamente) Ativa a Function do .dblclick(parenteses)
+
+
+$("EID").mouseenter(function () {}) |||  Mouse Enter, Quando a Seta do Mouse Estiver somente "por cima" do Elemento Especificado Ativa a Function do .mouseenter(parenteses)
+
+
+$("EID").mouseleave(function () {}) |||  Mouse Leave, Quando a Seta do Mouse Sair de "cima" do Elemento Especificado Ativa a Function do .mouseleave(parenteses)
+
+
+$("EID").mousedown(function () {}) |||  Mouse Down, Assim que o Botão do Mouse for precionado no Elemento Especificado Ativa a Function do .mousedown(parenteses)
+
+
+$("EID").mouseup(function () {})   |||   Mouse Up, Assim que o Botão do Mouse sair da pressão do click no Elemento Especificado Ativa a Function do .mouseup(parenteses)
+
+
+
+$("EID").focus(function () {})     |||  Focus, Quando o Elemento Especificado for focado (selecionado, apertado, | pra escrever) Ativa a Function do .focus(parenteses)
+
+
+$("EID").blur(function () {})      |||  Blur, Quando o Elemento Especificado for desfocado (não: selecionado, apertado, | pra escrever) Ativa a Function do .blur(parenteses)
+
+
+$("EID").focus()                   ||| Focur Só com Método, Automaticamente ao abrir a pagina ja Foca o Elemento Especificado. (Não tem como colocar uma function quando focado???)
+
+
+$("EID").keyup(function () {}))    ||| Key Up, ativa o evento quando o usuario apertar e soltar a tecla
+
+
+$("EID").keydown(function () {}))    ||| Key Down, ativa quando o usuario apertar a tecla
+
+
+$("EID").on( "Nome_Do_Evento", function () {})  ||| Metodo mais abreviado on, elemento especificado recebe o evento definido no .on("nome do Evento") e sua ação na Function pois , depois
+
+
+
+$("#button").on({
+click: function () {$()}}, {mouseenter: function ( ){}}, {mouseleave: function (){}     ||| .on, Pode Inserir varios eventos para o mesmo Elemento definido
+})
+
+
+
+
+EFEITOS/ANIMAÇOES
+
+
+$("EID").hide(parametros); ||| Oculta o objeto especificado. 
+
+$("EID").show()    ||| Mostra o objeto especificado
+
+$("EID").toggle()  ||| Se o Elemento estiver Visivel deixa-o Invisivel e vice e versa 
+
+
+$("EID").fadeToggle()  ||| Se o Elemento estiver Visivel deixa-o Invisivel e vice e versa (efeito diferente)
+
+$("EID").fadeOut() ||| Oculta objeto especificado (efeito diferente)
+
+$("EID").fadeIn()  ||| Mostra objeto especificado (efeito diferente)
+
+
+$("EID").slideDown()  ||| Mostra  o objeto com o efeito deslizando pra baixo 
+
+$("EID").slideUp()    ||| Esconde o objeto com o efeito deslizando pra cima 
+
+$("EID").slideToggle() ||| ||| Se o Elemento estiver Visivel deixa-o Invisivel e vice e versa 
+
+
+parametros() de todos esses  acima: 
+
+(1000) em numeros é o delay para ele esconder/mostrar
+ 
+em letras ("fast") é Rapido; ("slow") é Devagar
+
+(parametro1, function() {} ) ||| Função a ser executada pós parametro 1
+
+
+
+$("EID").animate({left:"250px"}) ||| Movimenta o elemento para direção e tanto especificado no ({}) 
+**o elemento NÃO pode ser "static" no CSS
+
+
+
+
+
+$("EID").css("background","blue").slideUp().slideDown(); Exemplo de Encadeamento de açoes. 
+
+Define a ordem das açoes colocando  . após o fim da anterior e depois aproxima na sequencia    
+
+
+
+
+CSS
+
+
+$("EID").css( "Nome_Propriedade_CSS" , "Conteudo de Valor" );  ||| Alterando CSS do Elemento Especificado 
+
+exemplo: $("EID").css( "color" , "blue" )   -  No caso selecionou primeiro a Propriedade "Color" e depois seu Valor Atribuido "Blue"
+
+
+
+
+
+
+
+
+AJAX  
+
+
+$("EID").load("nome_arquivo.extensão ou endereço do local") ||| Load, Carrega um conteudo Externo a pagina, no elemento especificado
+
+
+$.get("Endereço Site Externo",function(parametro_dados,parametro_status){comandos com os parametros da function} ||| Get, pega informaçoes de um site externo 
+
+
+$.post("endereço site a ser enviado",{conteudo1:tal,conteudo2:tal},function (parametro_dados,parametro_status) ||| POST, envia informaçoes para um site externo
+{comandos com os parametros da function})
+
+
+*a Function serve para dar um retorno de resultado da requisição * dados são as informaçoes do objeto pego, e o status se deu erro ou certo
+
+function(parametro_dados,parametro_status){parametro_dados.nome_valor} ||| Pega dentro do Objeto "dados" só o valor especificado  
+
+
+$.ajax({
+    url: "Endereço Site Externo",
+    type: " GET ou POST ou LOAD ",
+    success: function(dados,status){
+        execuçoes se a Requisição for bem Sucedida 
+
+    },
+    error: function () {
+        execuçoes se a Requisição der erro
+
+})    ||| Sintaxe Ajax jeito Completo
+
+
+
+
+
+OTHERS
+
+** Todos os EID significa:  Identificador Do Elemento 
+
+
+$(document).ready( function() {}); ||| Quando o (document) estiver Pronto (Carregou) Executa os comandos dentro do .ready(Parenteses)
+
+* É até melhor colocar comandos dentro do .ready por que ai é certeza que o J_query ja vai ter sido carregado (colocar dentro de uma Function) 
+
+
+$("EID").click(function () {   $(this)      })      ||| This, especifica o mesmo elemento selecionado no bloco pai dele (especifica o vetor certinho mesmo) 
+
+
+
+
+$.noConflict(); ||| Método Jquery Sem Conflito, Serve para não da Conflito com outras bibliotecas que usam $ tambem.
+
+Assim, Depois de Ativado, Todo Codigo jQuery usa a sintaxe:  jQuery   em sua declaração 
+
+exemplo:   jQuery("EID").html("No Conflit Metod");
+
+** Alem de que se pode atribuir o comando:  $.noConflict()  a uma var especifica, assim usando-a no lugar da sintaxe "jQuery"
+
+exemplo: var ex = $.noConflict();
+
+ex("EID").html("No Conflit Metod");
+
+
+
+$("Tag_html sub_tag").filter(function () {})   ||| Sintaxe para selecionar uma sub tag, isto é, uma tag que esta dentro de outra no HTML
+
+
+
+
+
+
+

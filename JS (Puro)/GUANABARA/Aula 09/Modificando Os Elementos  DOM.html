@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{background:purple; font-size:21px; color:white;}
+p{color:rgb(250, 250, 54);}
+    </style>
+</head>
+<body>
+    <p> Estudando Dom </p>
+
+    <p> Aqui Sera O <strong>Resultado:</strong></p>
+    <div id="msg">Click Here </div>
+
+    <p> Viu?</p>
+
+
+
+
+    <script>
+     var p1 = document.getElementsByTagName('p')[0];
+     var p2 = document.getElementsByTagName('p')[1];
+     var p3 = document.getElementsByTagName('p')[2].style.color = "black";
+     
+     document.write("<br> Texto Pego Pelo JS: " +p1.innerText);
+     document.write("<br> Segundo Texto Formatação Original Pego Pelo JS:"+p2.innerHTML);
+
+     p1.style.color = "black";
+
+     var msg = document.getElementById("msg");
+     
+     msg.style.background = "green";
+
+     msg.innerText = "Texto Trocado...";
+
+     document.write("<br> Texto Da Div Pego pelo JS: "+msg.innerText);
+     
+     
+
+     var body_document = document.body;
+     body_document.style.background  = "red"; // Mudança da cor do Background do Site
+
+    
+     
+
+    </script>
+</body>
+</html>
