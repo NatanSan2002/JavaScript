@@ -379,6 +379,7 @@ for( var vetor in arrayVar ){
 
 OBJETOS:
 
+
 var nomeobj = {}; ||| Declaração de Variavel como Objeto (Só declaração, Sem conteudo)
 
 var nomeobj = {dado1: conteudo1, dado2: conteudo2, dado 3: conteudo3 }; *não coloca virgula no ultimo dado*
@@ -388,6 +389,11 @@ var nomeobj = {[nomevar]: conteudo} ||| Nome do dado igual a o conteudo de uma V
 var nomeobj = { função () {}  } ||| Método abreviado para declaração de um dado tipo Função
 
 var nomeobj = { get função () {}  } ||| Método Get em uma função, serve para pegar o return da mesma se tiver  
+
+var nomeobj = { set função () {}  } ||| Método Set em uma função, serve para atribuir valor ao parametro da mesma
+
+colocando assim depois: nomeobj.funçãoset = conteudo;
+
 
 *Podemos colocar arrays dentro do objeto e até mesmo outro objeto sem problema
 
@@ -413,6 +419,27 @@ var juncao = Object.assign({}, obj1, obj2, ob3) ||| Junta Objetos em um NOVO. (P
 Object.assign(obj1, obj2, ob3) ||| Junta Objetos no "obj1" de fato  (não criando uma nova Var da junção)
 
 
+
+var { nomeDado, nomeDado2, nomeDado3 } = obj |||  Atribuir conteudo de um dado (ou mais) a uma Variavel(s) "Isoladas"
+
+**os nomes dentro da {chave} da var, devem serem iguais  aos dos Dados querido do objeto
+
+** podesse colocar nomeDado = conteudo_padrão para caso essa propriedade não exista receba um valor ainda assim 
+
+var {nomeDado: nomevar, nomeDado2: nomevar2 }  = obj ||| Atribuir um dado(ou mais)  a uma(s) var(s) só que mudando o nome da(s) Var(s)
+
+
+
+Object.keys(obj)       ||| Retorna o numero de Dados declarados e seus Nomes, que o objeto contem
+
+Object.keys(obj)[ num_posição] ||| Especifica o local do Dado pelo numero
+
+Object.values(obj)   ||| Retorna o numero de Dados e seus conteudos armazenados, que o objeto contem
+
+Object.values(obj)[ num_posição] ||| Especifica o local do Dado pelo numero
+
+** Tanto no .values como no .keys podesse colocar .length no final para pegar o numero de posiçoes somente  
+ 
 
 
 

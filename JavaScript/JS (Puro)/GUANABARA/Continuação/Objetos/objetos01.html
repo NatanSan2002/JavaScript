@@ -57,6 +57,9 @@ var usuario = {
     atual: 0, proximo: function () {
         ++usuario.atual
     },
+    set atuall(ini_posi){
+     this.atual = ini_posi
+    },
     anterior: function () {
         --usuario.atual
     },
@@ -68,7 +71,7 @@ var usuario = {
 
 
 
-
+usuario.atuall = 1;
 console.log(usuario.position); usuario.proximo();
 console.log(usuario.position); usuario.proximo();
 console.log(usuario.position); usuario.proximo();
