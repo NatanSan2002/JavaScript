@@ -36,10 +36,10 @@ isso respeitando a regra de concatenação com o  +  que junta os conteudos dife
 
 pra resolver isso coloque (parenteses) nas somas, exemplo: (5+6) assim o JS prioriza primeiro a Soma.
 
-
-
  
-let nome= conteudo - mesma coisa do var porem se for declarada dentro de um bloco{} só funcionara dentro dele e não fora
+let nome= conteudo - mesma coisa da var porem fica restrita apenas ao {bloco} em que foi declarada
+
+const nome = conteudo ||| mesma coisa da var,let porem o conteudo é IMUTAVEL, assim não podendo ser alterado futuramente.
 
 
 
@@ -256,6 +256,7 @@ Number(conteudo.value) - Converte o valor dado do conteudo para o tipo "Numero"
 
 
 
+FUNCTION
 
 
 function nome da função(parametros){conteudo da função} - Função: Uma serie de açoes ja programadas 
@@ -284,6 +285,8 @@ return - Retorno, Retorna um valor/conteudo feitos na função com os parametros
 
 *poderia colocar n1=0 , n2=0 nos parametros porque se caso algum dos dois não fossem informados iam ficar como 0 (não anulando a conta toda)
 
+
+(p1,p2) => {Açoes Arrow Function;} ||| Arrow Function, *p1 e p2 significa: parametros* e não são obrigatorios 
 
 
 
