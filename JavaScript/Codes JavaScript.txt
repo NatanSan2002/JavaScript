@@ -447,6 +447,68 @@ Object.values(obj)[ num_posição] ||| Especifica o local do Dado pelo numero
 
 
 
+CLASSES:     ||| São Moldes para objetos criados com base nelas, assim os objetos herdaram os mesmos atributos e métodos que a Classe contem.
+
+
+class Nome_da_Class {                                                       ||| Declaração/Criação de uma Classe
+                                                    
+constructor(Prop1,Prop2,Prop3) {                                    ||| Método Constructor, Todos os codigos que estiverem dentro de seu {bloco} serão executados assim que a Classe for ativada(ou seja: qndo um objeto for criado
+                                                                                                     com base nela por exemplo). * as Props dentro do () são parametros que variam dentro da Classe, assim difereciando atributos de cada objeto da Classe*
+                                                                                                            
+this.attr = document.write(` exemplo: A Classe: ${Prop1} foi criada`);    ||| Atributo da classe, nesse caso recebeu um comando, e como está no no Constructor ira ser executado assim que o Objeto for criado  
+
+                                                                                 ||| Esses Atributos aqui receberão propriedades mais simples, uns da Props da criação do objeto e outro (attr3) que sera atribuido a todos os Objs dessa Classe        
+this.attr1 = Prop2                                                                                             
+this.attr2 =  Prop3;                                                  *Atributos da Classe/Objetos só podem serem declarados aqui no constructor(), pois assim que um objeto for criado ele ja ira receber esses atributos
+this.attr3 = "Atributo Padrão";                                                           
+                                                                                    *Todos os Atributos dentro do constructor() tem que ter  this.  antes deles, pois é a sintaxe padrão para a chamada de de um atributo de um objeto mesmo
+                                                                                       sendo this apenas a especificação para o objeto em questão  *
+
+}
+
+Nome_Metodo(parametros) {                   ||| Declaração de Métodos da Classe, (só podem serem declarados fora do constructor()  )
+                                                          
+document.write(" exemplo Voce ativou um Método da Classe");  ||| Execuçoes do Método 
+
+                 *O Método Aqui só foi declarado, mas para ser usado tem que ser chamado posteriormente ou (agr sim) posto seu this.Nome_Metodo() dentro do constructor() ,para ser executado assim que um obj for criado)
+                 *Não, Não pode colocar "Function" no nome do Método*
+}
+
+}
+
+
+Criando um Objeto da Classe 
+
+var nome_objeto = new Nome_da_Class (conteudo_Prop1,conteudo_Prop2,conteudo_Prop3);  ||| Criação Objeto da Classe Anterior, apartir daqui de fato a Classe estara sendo utilizada
+
+nome_objeto.Nome_Metodo(parametros)  ||| Ativar um Método da Classe do Objeto  
+
+
+*e assim podemos criar varios Objetos com base na sua Classe pai, eles então herdarão todo o conteudo dela, seja propriedades ou métodos() *
+
+
+class nome_Class extends Class_extendida{}    ||| Criando uma Classe como Extensão de outra, assim ela terá tudo que essa outra tem mais suas peculiaridades
+
+Class_extendida{ 
+constructor(prop1,prop2,prop3,propNew) {  ||| Outro constructor para essa classe, que tera as mesms props da classe anterios mais suas novas props  
+super(prop1,prop2,prop3);      ||| super(), esse método executa o msm constructor() da classe anterior (que seria substituido por esse novo) por isso tem que colocar as msm props da anterior dentro do seu ()                           
+this.extension = propNew;       ||| exemplo de um atributo que só tem nessa classe Extendida, que recebe a nova Prop exclusiva dessa classe       
+}
+             
+}
+
+
+var nome_objetoExt = new nome_Class_extensão(conteudo_Prop1,conteudo_Prop2,conteudo_Prop3,conteudo_PropNew);  ||| Criação Objeto de uma Classe de Extensão (com Props Próprias dela)
+
+
+*quando se utiliza um this. em uma função "callback" e depois quiser da um this dentro da propria classe/objeto mesmo, isso ira falhar pois o this ficou condicionado a essa função callback,
+para resolver basta usar o método bind nesse método,  dentro do constructor() por exemplo  { this.nome_método = this.nome_método.bind(this) } *
+
+
+
+
+
+
 
 
 \u{Conteudo codigo emoji} - Emoji no Javascript, usa o msm codigo do HTML porem tira a primeira parte e coloca o \u e o codigo normal depois

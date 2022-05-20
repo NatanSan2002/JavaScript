@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+<meta charset="UTF-8">
+<title>Classes</title>
+</head>
+<body>
+<script>
+class abstrata {
+constructor(nome,tipo,ano) {
+this.sinal = document.write(`A Classe: ${nome} foi criada `);
+
+this.tipo = tipo
+this.ano =  ano;
+this.app = "Visual Studio"
+
+//this.AfterComand("TST"); // ativar método ja na criação do Objeto
+}
+
+AfterComand(s) {
+document.write(" <br> Voce ativou o: AfterComand da Classe: "+s);
+}
+
+
+
+}
+
+
+const objeto = new abstrata("OBJ","Tipo: Objeto",2022);
+
+const obj2 = new abstrata("2",2,2022);
+
+console.log(obj2);
+
+//obj.AfterComand("Teste Parametro");    //ativar Método da classe e de seus objetos
+
+
+//Estendendo a Classe 
+
+class abstrata_plus extends abstrata{
+constructor(nome,tipo,ano,ext) {
+super(nome,tipo,ano);
+this.extension = ext;
+}
+}
+
+const obj_plus = new abstrata_plus("plus","OBJP",2022,"Classe Extend");
+
+
+console.log(obj_plus);
+
+
+
+</script>
+</body>
+</html>
