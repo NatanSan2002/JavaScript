@@ -380,7 +380,7 @@ for( var vetor in arrayVar ){
 
 
 
-OBJETOS:
+OBJETOS:  ||| Tudo na  programação é um Objeto, nesse caso, nós é que criaremos os nossos própios (document.write() exemplo, é um objeto e um método do mesmo)
 
 
 var nomeobj = {}; ||| Declaração de Variavel como Objeto (Só declaração, Sem conteudo)
