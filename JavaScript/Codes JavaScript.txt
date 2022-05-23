@@ -532,4 +532,19 @@ Math.random() * (conteudo numero Maximo - conteudo numero Minimo +1) +conteudo n
 
 
 
+... ||| Rest e Spread
+
+function f(...nums){} ||| Rest, Quando colocado ...antes de uma var comum, a transforma em uma array se necessario(e ele receber mais parametros nesse exemplo)
+
+console.log(...n)  ||| Spread, imagine que esse "n" é um array, nesse caso, os ... iram dividi-lo em variaveis normais mesmo 
+
+* funciona um pouco diferente com objetos, mas a ideia de dividi-los é a mesma*
+
+*...  São comandos imediatos, assim, não da para atribuir o resultado de cada método deles armazenando em uma var por exemplo*
+
+
+
+
+
+
 
