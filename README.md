@@ -1,7 +1,7 @@
 # JavaScript
- Meus estudos de JavaScript e suas bibliotecas(JQuery)
+ Meus estudos de JavaScript e JQuery
 
- Estudo a Linguagem desde o começo do ano passado quando foi passada no 1 semestre da faculdade de TADS, porem só agora (isso a 2 meses) decidi hospedar meus estudos aqui no GitHub, então não se assuste pelos poucos commits.
+ Estudo a linguagem desde o começo do ano passado quando foi passada no 1 semestre da faculdade de TADS, porem os códigos dessa época acabaram se perdendo pela formatação que fiz no PC, sobrando a maior parte apenas do curso: Curso em Video que fiz depois para melhor compreensão dela. Alem de que só agora decidi hospedar meus estudos aqui no GitHub, então não estranhe pelos poucos commits.
 
 
 
