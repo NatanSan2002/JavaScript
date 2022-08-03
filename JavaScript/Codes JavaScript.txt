@@ -261,6 +261,9 @@ Number(conteudo.value) - Converte o valor dado do conteudo para o tipo "Numero"
 (Para usar o Console.log do Visual Studio Code apertar "F5" e permitir a confiança de usar arquivos de trabalho  e dps na tela do script.js "F8" para executar as açoes do console)
 
 
+elemento.classList.add("NomeClass")  ||| Adiciona classe ao Elemento
+
+
 
 FUNCTION
 
