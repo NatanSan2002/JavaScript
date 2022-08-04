@@ -193,7 +193,7 @@ taghtml.style.color = "rgb(0,172,238)" - Codigo RGB
 
 taghtml.style.color = taghtml2.style.color - Tambem é possivel alterar para valores de outros elementos do site, nesse caso a cor do texto fica igual ao da tag referida depois do = taghtml2
 
-
+taghtml.style.display = "tipo do display"  ||| Pode ser posto inline, block, flex, ou none 
 
 taghtml.style.textAlign = "conteudo de posição" - Alinha o Texto em uma posição, exemplo: "center"
 
