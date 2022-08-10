@@ -533,6 +533,8 @@ Math.floor(conteudo numero) ||| Se o numero dentro do() for quebrado .float  arr
 
 Math.round(conteudo numero) ||| Se o numero dentro do() for quebrado .float  arredonda para o numero inteiro a Cima
 
+Math.ceil(conteudo numero)  ||| Se o dentro do() for quebrado .float arredonda para cima ou para baixo dependendo de qual mais perto esta
+
 Math.random() ||| Escolhe um numero entre 0,0 a 0,9 aleatoriamente 
 
 *Para expandir as possibilidades usar: 
