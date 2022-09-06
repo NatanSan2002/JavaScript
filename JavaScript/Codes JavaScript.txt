@@ -376,7 +376,15 @@ nomevar.push(conteudo) - acrescenta a variavel mais um valor dps do ultimo array
 
 nomevar.length - informa o numero de arrays(setores) que a variavel tem (ver dentro de um document.write)
 
-nomevar.sort() - ordena em ordem crescente os numeros das arrays   
+nomevar.sort() - ordena em ordem crescente os numeros das arrays
+
+array.sort(function ( a, b ) {
+        if ( a.prop > b.prop ){
+          return -1;} else if ( a.prop < b.prop){
+          return true;
+}
+    }
+)   
 
 nomevar.indexOf(conteudo a ser buscado dentro do array); - Faz uma busca do conteudo dentro da var array e retorna o vetor onde ele esta, se não encontrar retorna como -1 (exibir document.write, console.log)
 
