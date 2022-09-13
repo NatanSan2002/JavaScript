@@ -289,7 +289,9 @@ return `A Soma de ${n1} + ${n2} é = a ${soma}`;
 
 return - Retorno, Retorna um valor/conteudo feitos na função com os parametros solicitados no ()
 
-*Ai para guardar esse resultado utilizar uma var com essa Função e Parametros nomeF(5,6) e para exibir no Document.write, Console Log etc...
+*Ai para guardar esse resultado do retorno, utilizar uma var com essa Função: var guardar = nomeF(parametros)
+
+tambem serve para exibir no Document.write, Console Log etc... console.log( nomeF(p) )
 
 
 *poderia colocar n1=0 , n2=0 nos parametros porque se caso algum dos dois não fossem informados iam ficar como 0 (não anulando a conta toda)
