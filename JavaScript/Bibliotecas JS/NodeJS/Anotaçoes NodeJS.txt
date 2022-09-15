@@ -1,0 +1,60 @@
+*TERMINAL*
+
+node -v ||| Verifica Versão Atual do Node
+
+npm init ||| Inicia o NPM nesse local criando arquivo package.json, (vai fazer umas perguntas, aperte Enter)
+
+node name_arquivo.js ||| Executa arquivo desse local
+
+
+BIBLIOTECAS 
+
+npm install ||| Instala todas as depedencias de um projeto (quando baixa-mos em outra maquina sem o node_modules)
+
+npm install nome_conteudo ||| Instala biblioteca (método só nesse local)
+
+npm install -g nome_conteudo ||| Instala Globalmente 
+
+npm install  nome_conteudo --save-dev ||| Instala como dependencia (algo usado só na produção)
+
+npm run nome_comando  ||| Roda Açoes de uma biblioteca (nome_comando do "scripts" do package.JSON)
+
+*se a biblioteca foi instalada globalmente não precisa criar o comando la no scripts do packageJSON
+
+
+
+
+
+
+npm install nodemon  ||| Atualizada servidor automaticamente a cada mudança (recomendado instalar no modo --save-dev) 
+
+npm install express     ||| Servidor Express
+
+
+
+
+*JavaScript* 
+
+module.exports = conteudo ||| Exporta uma unica coisa, pode ser uma var, class, objeto, etc
+
+module.exports = {conteudo,} ||| Exporta Varios conteudos dentro de um objeto, separando-os por "," 
+
+const nomevar = require("./nome_arquivo.js") ||| Importa conteudo de outro arquivo (que exportou) 
+
+const {nomevar} = require("./nome_arquivo.js") ||| Var com {destructin} ideal para importção de varios conteudos atraves de um objeto 
+
+require("./nome_arquivo.js") ||| Importação "solta", executa os arquivo sem guarda-lo em uma var 
+
+*Os códigos de um arquivo só funcionam quando são importados por algum 
+
+
+
+*Package.JSON* 
+
+"scripts": {"nome_comando": "biblioteca nome_arquivo.js"} ||| Comandos das bibliotecas instaladas a serem usados no npm run 
+
+exemplo: {"starter": "nodemon index.js"} (o nome do comando pode ser qualquer um)
+
+
+
+

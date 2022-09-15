@@ -1,0 +1,17 @@
+{
+  "name": "treino",
+  "version": "1.0.0",
+  "description": "Revisao de NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "starter": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
