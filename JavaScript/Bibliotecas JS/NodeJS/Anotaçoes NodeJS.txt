@@ -1,3 +1,8 @@
+
+Por favor, desconsidere as prováveis gafes de definição contidas aqui, uso elas apenas para "fast check" sobre cada comando e sua sintaxe, quando quero uma informação mais detalhada e certa, geralmente busco em sites especializados para isso, como o "W3Schools".
+
+
+
 *TERMINAL*
 
 node -v ||| Verifica Versão Atual do Node
