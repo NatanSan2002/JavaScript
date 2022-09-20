@@ -35,6 +35,10 @@ npm install nodemon  ||| Atualizada servidor automaticamente a cada mudança (re
 
 npm install express     ||| Servidor Express
 
+npm install mongoose ||| Servidor MONGODB
+
+npm install dotenv       ||| Arquivos .Env, São arquivos que geralmente tem variaveis de valores sensiveis (como senhas), assim são eles que são passados quando esses dados forem pedidos (por no .gitignore obvio)
+
 
 
 
