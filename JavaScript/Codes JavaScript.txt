@@ -297,7 +297,12 @@ tambem serve para exibir no Document.write, Console Log etc... console.log( nome
 *poderia colocar n1=0 , n2=0 nos parametros porque se caso algum dos dois não fossem informados iam ficar como 0 (não anulando a conta toda)
 
 
-(p1,p2) => {Açoes Arrow Function;} ||| Arrow Function, *p1 e p2 significa: parametros* e não são obrigatorios 
+(p1,p2) => {Açoes Arrow Function;} ||| Arrow Function, não cria um novo "this" para ela mesma
+
+*p1 e p2 significa: parametros* e não são obrigatorios 
+
+
+const NomeF = (p1,p2) => {Açoes Arrow Function} ||| Arrow Function Armazenada, se for usa-la muitas vezes
 
 
 
