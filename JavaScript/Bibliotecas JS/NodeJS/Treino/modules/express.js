@@ -3,7 +3,6 @@ const UserModel = require("../src/models/user.model.js")
 
 const app = express();
 
-const port = 8080;
 
 app.get("/home", (req, res) => {
 res.contentType("application/html");
@@ -25,6 +24,8 @@ const user = UserModel.create(req.body);
 
 res.status(201).json(user) //201 significa que a criação foi feita com sucesso
 })
+
+const port = 8080
 
 app.listen(port, () => console.log("Rodando Servidor Express na porta:"+port))
 
