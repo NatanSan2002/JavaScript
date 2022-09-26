@@ -581,9 +581,10 @@ console.log(...n)  ||| Spread, imagine que esse "n" é um array, nesse caso, os 
 FUNÇOES MUITO USADAS (NO REACT): 
 
 MAP ||| Array.map( (iten) => 
-<Componente prop1={iten.p1} prop2={iten.p2} />   ||| Executa uma ação com cada vetor do array (iten é callback, pode ser dado qualquer nome)
+<Componente key={iten.id} prop1={iten.p1} prop2={iten.p2} />   ||| Executa uma ação com cada vetor do array (iten pode ser dado qualquer nome)
 )
 
+*key é aconselhavel, ai pega o id que é unico em cada vetor
 
 FILTER ||| var Array_Filtrado =  array.filter( (iten) =>
 iten.includes("R$")   || iten.price > 200 ? true : false           ||| Faz um array filtrado só com os vetores que retornaram TRUE na execução (esse array tem que ser guardado em uma var)
@@ -591,8 +592,11 @@ iten.includes("R$")   || iten.price > 200 ? true : false           ||| Faz um ar
 
  
 REPLACE ||| Array.map( (iten) => 
-iten.price = iten.price.replace("R$", "")                      ||| Modifica certo valor por outro (nesse caso nada), tambem deve ser atribuido a mesma variavel o novo valor 
+iten.price = iten.price.replace("R$", "")                      ||| Modifica certo valor por outro (nesse caso nada), tambem deve ser atribuido a mesma variavel o novo valor se quiser substitui-lo
 )
+
+
+var_string.replaceAll("R$", "outra coisa")  ||| Modifca Todos os caracteries que tiverem
 
 
 
