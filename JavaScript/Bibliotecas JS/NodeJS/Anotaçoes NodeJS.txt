@@ -11,6 +11,8 @@ npm init ||| Inicia o NPM nesse local criando arquivo package.json, (vai fazer u
 
 node name_arquivo.js ||| Executa arquivo desse local
 
+ctrl + c ||| Reseta/cancela ação e volta a dar comandos ao terminal
+
 
 BIBLIOTECAS 
 
@@ -63,6 +65,32 @@ require("./nome_arquivo.js") ||| Importação "solta", executa os arquivo sem gu
 "scripts": {"nome_comando": "biblioteca nome_arquivo.js"} ||| Comandos das bibliotecas instaladas a serem usados no npm run 
 
 exemplo: {"starter": "nodemon index.js"} (o nome do comando pode ser qualquer um)
+
+
+
+Servidores
+
+Requires  
+
+const http = require("http")  ||| Fundamental na criação de Servidor 
+
+
+
+http.createServer((request,response) => {  ||| os 2 parametros que o método vai usar
+
+response.writeHead(200,{"Content-Type":"text/html"})  ||| Informações do servidor, 200 é que é OK, {"Tipo do Conteudo": "Html,text,Json"}
+
+**Se as resposta.write a seguir não tiver nenhum conteudo informado no "Content-Type" nesse caso "html" o servidor não roda
+
+response.write("<h1> Conteudo</h1>");  ||| Exibição na pagina
+
+response.write(request.url) ||| Um uso do request é ter informaçoes da requisição, nesse caso o link da URL
+
+r.end();  ||| Encerra resposta, para servidor não ficar rodando eternamente
+
+}).listen(numero porta,"numero host",console.log("Mensagem Servidor Rodando"))  ||| Guarda Servidor na porta dada para ser acessado via http://localhost:porta
+
+** numero host pode ser o padrão: 127.0.0.1
 
 
 
