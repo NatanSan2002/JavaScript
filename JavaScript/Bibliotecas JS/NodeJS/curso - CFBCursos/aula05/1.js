@@ -5,6 +5,15 @@ const port = process.env.PORT || 3000;
 
 const server = http.createServer((req,r) => {
 
+fs.readFile("./1.html",(error,file) => {
+
+r.writeHead(200,{"Content-Type":"text/html"});
+
+r.write(file);
+
+r.end();
+
+});
 
 
 })
