@@ -68,12 +68,14 @@ exemplo: {"starter": "nodemon index.js"} (o nome do comando pode ser qualquer um
 
 
 
+
+
 Servidores
 
-Requires  
 
-const http = require("http")  ||| Fundamental na criação de Servidor 
+Servidor Nativo do NODE
 
+const http = require("http")  ||| Require Fundamental na criação de Servidor 
 
 
 http.createServer((request,response) => {  ||| os 2 parametros que o método vai usar
@@ -90,7 +92,61 @@ r.end();  ||| Encerra resposta, para servidor não ficar rodando eternamente
 
 }).listen(numero porta,"numero host",console.log("Mensagem Servidor Rodando"))  ||| Guarda Servidor na porta dada para ser acessado via http://localhost:porta
 
-** numero host pode ser o padrão: 127.0.0.1
+** numero host pode ser o padrão: 127.0.0.1 (em "str")
+
+
+const port = process.env.PORT ||| Serve para quando não se sabe qual porta recebera (em uma hospedagem) 
+
+
+
+
+const url = require("url") ||| Require de Query na URL 
+
+var query = url.parse(request.url,true).query; ||| Método Da URL para converter dado em valores de url (query)
+
+*ai a request.url teria que ter o "/?" no começo da url para indicar que existem querys nessa URL
+
+* exemplo: localhost:3000/?var1=dado1&var2=dado2 (separa as variaveis com o &)
+
+
+query.var1 ||| variavel da query
+
+
+
+Servidor Express
+
+
+terminal* npm install express (instalar com --save ??)
+
+const express = require("express");
+const app = express();
+
+
+app.get("/pag", (req,res) => {    ||| Método Get, "/pag" é a pagina que sera a exibição, arrow function com parametros de request e resposta
+ 
+res.send("Teste Express Server Send")  ||| res.tipo do método, nesse caso é um Send que é um simples texto
+
+});
+
+app.get("/pag2",(req,res) => {
+    res.json({Nome33:"Carlos",   ||| método Json, é um JSON
+Idade:"25", Email:"Etcetcet@gmail.com" })   
+   })
+
+
+app.listen(numero porta,"numero host",console.log("Mensagem Servidor Rodando"))  ||| Guarda Servidor na porta dada para ser acessado via http://localhost:porta
+
+** numero host pode ser o padrão: 127.0.0.1 (em "str")
+
+
+const port = process.env.PORT ||| Serve para quando não se sabe qual porta recebera (em uma hospedagem) 
+
+
+
+
+
+
+
 
 
 
