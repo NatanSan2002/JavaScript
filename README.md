@@ -1,6 +1,6 @@
 # JavaScript
 
- Meus estudos de JavaScript e JQuery
+ Meus estudos de JavaScript, NodeJS, e JQuery
 
  Estudo a linguagem desde o começo do ano passado quando foi passada no 1 semestre da faculdade de TADS, porem os códigos dessa época acabaram se perdendo pela formatação que fiz no PC, sobrando a maior parte apenas do curso: Curso em Video que fiz depois para melhor compreensão dela. Além de que só muito tempo depois decidi hospedar meus estudos aqui no GitHub, então não estranhe por relativamente poucos commits.
 
