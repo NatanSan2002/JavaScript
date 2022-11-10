@@ -139,7 +139,33 @@ app.listen(numero porta,"numero host",console.log("Mensagem Servidor Rodando")) 
 ** numero host pode ser o padrão: 127.0.0.1 (em "str")
 
 
-const port = process.env.PORT ||| Serve para quando não se sabe qual porta recebera (em uma hospedagem) 
+const port = process.env.PORT ||| Serve para quando não se sabe qual porta recebera (em uma hospedagem)
+
+
+
+const fs = require("fs")
+
+(requisition,response) => {
+
+fs.readFile("Local_arquivo.tipo", (error, arquivo) => { ||| Fs.Read, ler arquivo 
+
+response.writeHead(200,{"Content-Type":"text/html"});
+
+response.write(arquivo);  ||| Exibi Arquivo pego do segundo parametro da arrow do FS.readFile
+
+
+fs.appendFile("./create_file.txt","Conteudo do arquivo",(error) => { ||| Append File, Cria arquivo e seu conteudo
+
+if(error) throw error;  ||| Erro
+
+});
+
+})
+
+} 
+
+
+
 
 
 
