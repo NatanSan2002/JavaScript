@@ -158,15 +158,32 @@ fs.appendFile("./create_file.txt","Conteudo do arquivo",(error) => { ||| Append 
 
 if(error) throw error;  ||| Erro
 
-});
+});})} 
 
+
+terminal: npm install router  ||| Instalando Router (recomendado método --save)
+
+const rotas = express.Router()   ||| Métódo de Rotas do Express
+
+
+rotas.get("/",(req,r) => {  ||| Router() tem o .get() normalmente
+r.json({"pag":"padrão"});
 })
 
-} 
+
+rotas.get("/:parametro",(req,r) => { /:parametro pode ser dado qualquer nome
+
+const p = req.params.parametro;  ||| é o /:parametro da URL 
+
+if(p == tal_coisa) {
+r.status(200).send("Achamos") ||| Status 202 serve para informar que foi sucesso
+}else{
+r.status(404).send("Not Found") |||  Status 202 serve para informar que não foi achado
+
+}) ||| express.Router() serve para pegarmos um valor da URL e usa-lo para executar diferentes condiçoes (ifs)
 
 
-
-
+** exporta a var rotas para outro arquivo e usar: app.use("/",rotas)  (vai executar a mesma coisa que em cima) ;
 
 
 
