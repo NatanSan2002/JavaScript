@@ -187,6 +187,35 @@ r.status(404).send("Not Found") |||  Status 202 serve para informar que não foi
 
 
 
+Eventos 
+
+
+const events = require("events")  ||| Require para trabalhar com Events 
+
+
+const EVM = new events.EventEmitter() ||| Método criador de Eventos
+
+
+EVM.on("nome_evento",() => {Execuções Evento})  ||| .on, adiciona Métodos (eventos)
+
+* tambem poderia colocar uma função ja criada no segudo parametro 
+
+
+EVM.emit("nome_evento")  ||| .emit, Emite, Ativa o Evento  
+
+
+
+
+Formidable Upload de arquivos
+
+terminal: npm install formidable
+
+
+
+
+
+
+
 
 
 
