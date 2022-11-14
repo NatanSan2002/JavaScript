@@ -143,6 +143,53 @@ const port = process.env.PORT ||| Serve para quando não se sabe qual porta rece
 
 
 
+Servidor MongoDB
+
+*Criar projeto no site do MongoDB*
+
+terminal: npm install mongodb
+
+const mongo = require("mongodb").MongoClient
+
+
+const url = "url do banco" ||| Aqui é a URL que o site do mongoDB gera para cada banco criado, no meio dela tem "<password>" onde é substituido pelo seu password de conexão (não é o do login) 
+
+
+mongo.connect(url, (error,banco) =>{ ||| Conectar ao MongoDB
+if(error){throw error}; ||| Verifica se deu algum erro
+
+const dbo = banco.db("Nome_Banco"); ||| Cria Banco de Dados 
+
+const colecao = "Nome_Coleção";  ||| Coleção é o equivalente a uma tabela no SQL
+
+
+const obj = {curso: "Curso de React",autor:"Canal CFB Cursos"}; ||| Aqui é um objeto JSON, vai ser o equivalente aos dados de tabela no SQL por exemplo
+
+dbo.collection(colecao).insertOne(obj, (error,result) =>{ ||| Cria Coleção(Tabela) no Banco. E Insere Dados (JSON)
+if(error){throw error};
+
+console.log("1 Novo Curso Foi Inserido");
+
+banco.close();  ||| Encerra Conexão, (tem que tar dentro do bloco{} dos Insert,find etc?)
+} );
+
+dbo.collection("nome_colecao").find({prop: 'Conteudo'}).toArray((error,result) =>{ 
+    if(error){throw error};  ||| Find, faz busca por algum dado na Coleção. depois deixa-o em array para visualizar
+                                                 **Se quiser só ver todos os dados da Coleção basta deixar o ({}) do .find vazio 
+
+                                                  **dbo.collection("nome_colecao").find({},{projection:{prop:0,prop2:0}}).toArray...  |||  Oculta as props na busca do objeto JSON referidas no projection:
+    
+    console.log(result); ||| Console para ver busca no Console
+    
+    } );
+
+});
+
+
+
+
+
+
 const fs = require("fs")
 
 (requisition,response) => {
@@ -209,6 +256,8 @@ EVM.emit("nome_evento")  ||| .emit, Emite, Ativa o Evento
 Formidable Upload de arquivos
 
 terminal: npm install formidable
+
+(ver aula 12 curso CFB muito confuso)
 
 
 

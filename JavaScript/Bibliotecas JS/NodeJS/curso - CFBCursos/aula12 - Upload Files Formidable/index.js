@@ -12,7 +12,7 @@ if(req.url == "/envioDeArquivo"){
 const form = new formidavel.IncomingForm();
 form.parse(req,(error,campos,files) => {
 const old_url = files.filetoupload.filepath;
-const new_url = "C:/Users/regra/Downloads/"+files.filetoupload.name;
+const new_url = "C:/Users/regra/Downloads/"+files.filetoupload.name+".jpg"; //o .jpg é pra o arquivo ja vim pronto, visto que ele esta retornado o arquivo com o nome "undefined" sem nenhuma extensão, assim deixado-o unitilizavel
 
 
 fs.rename(old_url,new_url, (error) => {
@@ -29,7 +29,7 @@ r.end();
     r.writeHead(200,{"Content-Type":"text/html"});
 
 r.write("<form action='envioDeArquivo' method='post' enctype='multipart/form-data'>");
-r.write("<input type='file' name='filetoupload'><br>");
+r.write('<input type="file" name="filetoupload"><br>');
 r.write("<input type='submit' value='Enviar'>");
 r.write("</form>");
 
