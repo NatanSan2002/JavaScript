@@ -41,6 +41,9 @@ npm install mongoose ||| Servidor MONGODB
 
 npm install dotenv       ||| Arquivos .Env, São arquivos que geralmente tem variaveis de valores sensiveis (como senhas), assim são eles que são passados quando esses dados forem pedidos (por no .gitignore obvio)
 
+require("dotenv").config() ||| Requirindo Dotenv no arquivo para poder pegar variaveis declaradas no arquivo .env  exem: const user = process.env.DADO_USUARIO
+
+
 
 
 
@@ -71,6 +74,8 @@ exemplo: {"starter": "nodemon index.js"} (o nome do comando pode ser qualquer um
 
 
 Servidores
+
+*Como Recursos De Servidores geralmente demoram, é bom usar  Async Functions() com await nesses comandos que tem alto tempo de resposta
 
 
 Servidor Nativo do NODE
@@ -166,7 +171,10 @@ const colecao = "Nome_Coleção";  ||| Coleção é o equivalente a uma tabela n
 const obj = {curso: "Curso de React",autor:"Canal CFB Cursos"}; ||| Aqui é um objeto JSON, vai ser o equivalente aos dados de tabela no SQL por exemplo
 
 dbo.collection(colecao).insertOne(obj, (error,result) =>{ ||| Cria Coleção(Tabela) no Banco. E Insere Dados (JSON)
-if(error){throw error};
+if(error){throw error};     
+                                         **.insertMany é a mesma coisa podendo inserir varios dados dentro de um array (Tem quer ser uma async () => {com await} ??)
+                                                 
+
 
 console.log("1 Novo Curso Foi Inserido");
 
@@ -174,12 +182,22 @@ banco.close();  ||| Encerra Conexão, (tem que tar dentro do bloco{} dos Insert,
 } );
 
 dbo.collection("nome_colecao").find({prop: 'Conteudo'}).toArray((error,result) =>{ 
+
     if(error){throw error};  ||| Find, faz busca por algum dado na Coleção. depois deixa-o em array para visualizar
                                                  **Se quiser só ver todos os dados da Coleção basta deixar o ({}) do .find vazio 
 
-                                                  **dbo.collection("nome_colecao").find({},{projection:{prop:0,prop2:0}}).toArray...  |||  Oculta as props na busca do objeto JSON referidas no projection:
+     **dbo.collection("nome_colecao").find({},{projection:{prop:0,prop2:0}}).toArray...  |||  Oculta as props na busca do objeto JSON referidas no projection:
+
+     **dbo.collection("colecao").find({}).sort({prop:1}).toArray...  |||   .Sort() aqui é colocado um objeto com nome da prop da tabela (array) e o 1 que significa que ordenara em ordem Decrecente
+                                                                                                                        *-1 ordena em ordem Crescente 
+     
+    **dbo.collection("colecao").deleteOne({prop: 'Conteudo'},(error,result) =>{    ||| .deleteOne, Deleta um objeto da coleçao cujo a {prop:conteudo} é igual
     
-    console.log(result); ||| Console para ver busca no Console
+                                                                                                                                 *deleteMany() é a mesma coisa só que deleta todos os objetos que o {} for igual
+    
+    console.log(result); ||| Console para ver busca no Console 
+
+       ** Como convertemos para Array podemos especificar por ele. exm: result[0].prop1
     
     } );
 
