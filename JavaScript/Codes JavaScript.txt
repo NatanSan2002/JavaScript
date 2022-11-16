@@ -362,9 +362,13 @@ quando a var i(5) chegar em 10 e dando falsa a condição, parando assim a execu
 
 do{executa tal ação; e  conteudo1++}while(conteudo1<conteudo2) - Do While, msm coisa do While ''normal'' só que executa o comando pelo menos UMA vez antes
 
+
 for(var i=1;i<6;i++){executa essa ação} - while comprimido
 
 exemplo: for(variavel i=1 ;enquanto a condição i<6 for verdadeira; incremento para mudar a variavel i++){executa o comando document.write(`DBZ ${i}`)}
+
+
+for(var i=1 ,var y=2 , var n = 3 ;i<6, y<3 , n < 6 ; i++, ++y, ++n){executa essa ação} - while comprimido. Com mais de uma variavel de incremento
 
 
 

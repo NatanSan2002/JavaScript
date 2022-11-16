@@ -186,23 +186,32 @@ dbo.collection("nome_colecao").find({prop: 'Conteudo'}).toArray((error,result) =
     if(error){throw error};  ||| Find, faz busca por algum dado na Coleção. depois deixa-o em array para visualizar
                                                  **Se quiser só ver todos os dados da Coleção basta deixar o ({}) do .find vazio 
 
+console.log(result); ||| Console para ver busca no Console 
+
+** Como convertemos para Array podemos especificar por ele. exm: result[0].prop1
+
+})
+
      **dbo.collection("nome_colecao").find({},{projection:{prop:0,prop2:0}}).toArray...  |||  Oculta as props na busca do objeto JSON referidas no projection:
 
      **dbo.collection("colecao").find({}).sort({prop:1}).toArray...  |||   .Sort() aqui é colocado um objeto com nome da prop da tabela (array) e o 1 que significa que ordenara em ordem Decrecente
                                                                                                                         *-1 ordena em ordem Crescente 
+    
+ **dbo.collection(colecao).find(query,{projection:{_id:0}}).limit(numero).toArray...  ||| .limit, Define o numero maximo de linhas(setores) do array que aparecerão 
+
      
-    **dbo.collection("colecao").deleteOne({prop: 'Conteudo'},(error,result) =>{    ||| .deleteOne, Deleta um objeto da coleçao cujo a {prop:conteudo} é igual
+    dbo.collection("colecao").deleteOne({prop: 'Conteudo'},(error,result) =>{    ||| .deleteOne, Deleta um objeto da coleçao cujo a {prop:conteudo} é igual
     
                                                                                                                                  *deleteMany() é a mesma coisa só que deleta todos os objetos que o {} for igual
     
-    console.log(result); ||| Console para ver busca no Console 
-
-       ** Como convertemos para Array podemos especificar por ele. exm: result[0].prop1
     
-    } );
-
-});
-
+    dbo.collection("colecao").updateOne({prop:valor_alvo},{$set:{prop: 'novo valor', prop2: "novo valor"}},(error,result) => { 
+                                                                                                                                               
+  ||| Update, atualiza uma linha da Coleção, sendo que o primeiro parametro é a propriedade e seu valor alvo para achar a linha, e o segundo é os valores das novas props a serem trocadas nessa linha
+          
+       *updateMany é a mesma coisa só que atualiza todas as linhas que baterem com o valor_alvo, não apenas uma
+    
+   
 
 
 
