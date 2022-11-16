@@ -98,7 +98,7 @@ banco.close();
         
         console.log(result.deletedCount+" - varias linhas deletada");
     
-    } ); 
+    } ); */
 
      query = {};  
 
@@ -108,7 +108,7 @@ banco.close();
     
     console.log(result);
     banco.close();
-    } ); */
+    } ); 
 
 
 
@@ -130,13 +130,22 @@ banco.close();
 
 
 
-   /* query = {curso:"Curso de Node"};       // Busca Dados Coleção (Testes Recorrente da aplicação)
+    /*query = {};       
 
 
-    dbo.collection(colecao).find(query,{projection:{_id:0}}).limit(2).toArray((error,result) =>{  
+    dbo.collection(colecao).aggregate([ // Juntando dados de outra coleção
+        { $lookup:{
+            from:colecao2,
+            localField:"idcurso", //Campos a serem comparados para serem juntados
+            foreignField:"idcurso",   // No caso ambas as coleçoes tem o mesmo nome "idcurso" mas o nome poderia diferente
+            as:"Detalhes"
+        }
+
+        }
+    ]).toArray((error,result) =>{  
     if(error){throw error};
     
-    console.log(result);
+    console.log(JSON.stringify(result));
     banco.close();
     } ); */
 

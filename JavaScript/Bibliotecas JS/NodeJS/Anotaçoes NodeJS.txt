@@ -210,6 +210,9 @@ console.log(result); ||| Console para ver busca no Console
   ||| Update, atualiza uma linha da Coleção, sendo que o primeiro parametro é a propriedade e seu valor alvo para achar a linha, e o segundo é os valores das novas props a serem trocadas nessa linha
           
        *updateMany é a mesma coisa só que atualiza todas as linhas que baterem com o valor_alvo, não apenas uma
+
+
+    .aggregate ||| ver aula 21* CFB Curso
     
    
 
